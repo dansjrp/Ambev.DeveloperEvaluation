@@ -13,7 +13,9 @@ public class CreateUserProfile : Profile
     /// </summary>
     public CreateUserProfile()
     {
-        CreateMap<CreateUserRequest, CreateUserCommand>();
+        CreateMap<CreateUserRequest, CreateUserCommand>()
+            .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
+            .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Address));
         CreateMap<CreateUserResult, CreateUserResponse>();
     }
 }

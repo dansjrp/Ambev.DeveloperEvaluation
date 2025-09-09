@@ -50,6 +50,16 @@ public class CreateUserCommand : IRequest<CreateUserResult>
     /// </summary>
     public UserRole Role { get; set; }
 
+    /// <summary>
+    /// Gets or sets the user's name (firstname, lastname).
+    /// </summary>
+    public Ambev.DeveloperEvaluation.Domain.Entities.Name Name { get; set; } = new Ambev.DeveloperEvaluation.Domain.Entities.Name();
+
+    /// <summary>
+    /// Gets or sets the user's address (city, street, number, zipcode, geolocation).
+    /// </summary>
+    public Ambev.DeveloperEvaluation.Domain.Entities.Address Address { get; set; } = new Ambev.DeveloperEvaluation.Domain.Entities.Address();
+
 
     public ValidationResultDetail Validate()
     {

@@ -47,7 +47,15 @@ public class UsersController : BaseController
         var validationResult = await validator.ValidateAsync(request, cancellationToken);
 
         if (!validationResult.IsValid)
-            return BadRequest(validationResult.Errors);
+        {
+            var errorResponse = new ApiErrorResponse
+            {
+                Type = "ValidationError",
+                Error = "Invalid input data",
+                Detail = string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage))
+            };
+            return BadRequest(errorResponse);
+        }
 
         var command = _mapper.Map<CreateUserCommand>(request);
         var response = await _mediator.Send(command, cancellationToken);
@@ -77,17 +85,43 @@ public class UsersController : BaseController
         var validationResult = await validator.ValidateAsync(request, cancellationToken);
 
         if (!validationResult.IsValid)
-            return BadRequest(validationResult.Errors);
+        {
+            var errorResponse = new ApiErrorResponse
+            {
+                Type = "ValidationError",
+                Error = "Invalid input data",
+                Detail = string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage))
+            };
+            return BadRequest(errorResponse);
+        }
 
         var command = _mapper.Map<GetUserCommand>(request.Id);
-        var response = await _mediator.Send(command, cancellationToken);
-
-        return Ok(new ApiResponseWithData<GetUserResponse>
+        try
         {
-            Success = true,
-            Message = "User retrieved successfully",
-            Data = _mapper.Map<GetUserResponse>(response)
-        });
+            var result = await _mediator.Send(command, cancellationToken);
+            if (result == null)
+            {
+                var errorResponse = new ApiErrorResponse
+                {
+                    Type = "ResourceNotFound",
+                    Error = "User not found",
+                    Detail = $"The user with ID {id} does not exist in our database"
+                };
+                return NotFound(errorResponse);
+            }
+            var userResponse = _mapper.Map<GetUserResponse>(result);
+            return Ok(userResponse);
+        }
+        catch (Exception ex)
+        {
+            var errorResponse = new ApiErrorResponse
+            {
+                Type = "InternalServerError",
+                Error = "An unexpected error occurred",
+                Detail = ex.Message
+            };
+            return StatusCode(500, errorResponse);
+        }
     }
 
     /// <summary>
@@ -107,15 +141,45 @@ public class UsersController : BaseController
         var validationResult = await validator.ValidateAsync(request, cancellationToken);
 
         if (!validationResult.IsValid)
-            return BadRequest(validationResult.Errors);
+        {
+            var errorResponse = new ApiErrorResponse
+            {
+                Type = "ValidationError",
+                Error = "Invalid input data",
+                Detail = string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage))
+            };
+            return BadRequest(errorResponse);
+        }
 
         var command = _mapper.Map<DeleteUserCommand>(request.Id);
-        await _mediator.Send(command, cancellationToken);
-
-        return Ok(new ApiResponse
+        try
         {
-            Success = true,
-            Message = "User deleted successfully"
-        });
+            var result = await _mediator.Send(command, cancellationToken);
+            if (result == null)
+            {
+                var errorResponse = new ApiErrorResponse
+                {
+                    Type = "ResourceNotFound",
+                    Error = "User not found",
+                    Detail = $"The user with ID {id} does not exist in our database"
+                };
+                return NotFound(errorResponse);
+            }
+            return Ok(new ApiResponse
+            {
+                Success = true,
+                Message = "User deleted successfully"
+            });
+        }
+        catch (Exception ex)
+        {
+            var errorResponse = new ApiErrorResponse
+            {
+                Type = "InternalServerError",
+                Error = "An unexpected error occurred",
+                Detail = ex.Message
+            };
+            return StatusCode(500, errorResponse);
+        }
     }
 }

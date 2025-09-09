@@ -74,3 +74,330 @@
 2025-09-08 20:44:49.388 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi) in 5439.6754ms
 2025-09-08 20:44:49.390 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
 2025-09-08 20:44:49.404 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/Users - 500 null text/plain; charset=utf-8 5465.1191ms
+2025-09-08 22:38:43.652 -03:00 [INF] Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService Health Check enabled at: '/health'
+2025-09-08 22:38:44.366 -03:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using 'C:\Users\dnumajiri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-08 22:38:46.204 -03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5119
+2025-09-08 22:38:46.207 -03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-08 22:38:46.208 -03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-08 22:38:46.209 -03:00 [INF] Microsoft.Hosting.Lifetime Content root path: C:\Git\Ambev.DeveloperEvaluation\backend\src\Ambev.DeveloperEvaluation.WebApi
+2025-09-08 22:38:57.254 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/ - null null
+2025-09-08 22:38:57.403 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/ - 404 0 null 150.6374ms
+2025-09-08 22:38:57.412 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5119/, Response status code: 404
+2025-09-08 22:39:04.280 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/swagger/index.html - null null
+2025-09-08 22:39:04.364 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/swagger/index.html - 200 null text/html;charset=utf-8 84.216ms
+2025-09-08 22:39:04.411 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/swagger/index.js - null null
+2025-09-08 22:39:04.425 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/swagger/index.js - 200 null application/javascript;charset=utf-8 14.1248ms
+2025-09-08 22:39:04.632 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/swagger/v1/swagger.json - null null
+2025-09-08 22:39:04.765 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 133.4191ms
+2025-09-08 22:39:25.076 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/Auth - application/json 59
+2025-09-08 22:39:25.085 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Auth.AuthController.AuthenticateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:39:25.116 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "AuthenticateUser", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AuthenticateUser(Ambev.DeveloperEvaluation.WebApi.Features.Auth.AuthenticateUserFeature.AuthenticateUserRequest, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Auth.AuthController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 22:39:25.249 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Auth.AuthController.AuthenticateUser (Ambev.DeveloperEvaluation.WebApi) in 126.5055ms
+2025-09-08 22:39:25.253 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Auth.AuthController.AuthenticateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:39:25.277 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/Auth - 500 null text/plain; charset=utf-8 201.4987ms
+2025-09-08 22:40:18.591 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/Users - application/json 133
+2025-09-08 22:40:18.608 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:40:18.617 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "CreateUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(Ambev.DeveloperEvaluation.WebApi.Features.Users.CreateUser.CreateUserRequest, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 22:40:19.719 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi) in 1099.5021ms
+2025-09-08 22:40:19.723 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:40:19.738 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/Users - 500 null text/plain; charset=utf-8 1147.2105ms
+2025-09-08 22:43:19.536 -03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-08 22:44:46.454 -03:00 [INF] Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService Health Check enabled at: '/health'
+2025-09-08 22:44:46.558 -03:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using 'C:\Users\dnumajiri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-08 22:44:46.624 -03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5119
+2025-09-08 22:44:46.627 -03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-08 22:44:46.628 -03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-08 22:44:46.629 -03:00 [INF] Microsoft.Hosting.Lifetime Content root path: C:\Git\Ambev.DeveloperEvaluation\backend\src\Ambev.DeveloperEvaluation.WebApi
+2025-09-08 22:45:00.709 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/swagger/index.html - null null
+2025-09-08 22:45:00.814 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/swagger/index.html - 200 null text/html;charset=utf-8 106.8589ms
+2025-09-08 22:45:00.839 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/swagger/index.js - null null
+2025-09-08 22:45:00.845 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/swagger/index.js - 200 null application/javascript;charset=utf-8 6.0362ms
+2025-09-08 22:45:01.107 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/swagger/v1/swagger.json - null null
+2025-09-08 22:45:01.234 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 126.9688ms
+2025-09-08 22:45:55.905 -03:00 [INF] Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService Health Check enabled at: '/health'
+2025-09-08 22:45:56.018 -03:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using 'C:\Users\dnumajiri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-08 22:45:56.085 -03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5119
+2025-09-08 22:45:56.088 -03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-08 22:45:56.089 -03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-08 22:45:56.090 -03:00 [INF] Microsoft.Hosting.Lifetime Content root path: C:\Git\Ambev.DeveloperEvaluation\backend\src\Ambev.DeveloperEvaluation.WebApi
+2025-09-08 22:46:56.332 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/Users - application/json 339
+2025-09-08 22:46:56.396 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:46:56.415 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "CreateUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(Ambev.DeveloperEvaluation.WebApi.Features.Users.CreateUser.CreateUserRequest, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 22:46:56.539 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-09-08 22:46:56.573 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi) in 149.5459ms
+2025-09-08 22:46:56.580 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:46:56.584 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/Users - 400 null application/problem+json; charset=utf-8 253.0007ms
+2025-09-08 22:54:13.956 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/Users - application/json 339
+2025-09-08 22:54:13.960 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:54:13.962 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "CreateUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(Ambev.DeveloperEvaluation.WebApi.Features.Users.CreateUser.CreateUserRequest, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 22:54:13.967 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-09-08 22:54:13.969 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi) in 4.4167ms
+2025-09-08 22:54:13.970 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:54:13.971 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/Users - 400 null application/problem+json; charset=utf-8 15.9692ms
+2025-09-08 22:55:25.303 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/Users - application/json 392
+2025-09-08 22:55:25.308 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:55:25.309 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "CreateUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(Ambev.DeveloperEvaluation.WebApi.Features.Users.CreateUser.CreateUserRequest, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 22:55:25.312 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-09-08 22:55:25.314 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi) in 2.4391ms
+2025-09-08 22:55:25.315 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:55:25.318 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/Users - 400 null application/problem+json; charset=utf-8 14.1835ms
+2025-09-08 22:56:51.062 -03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-08 22:57:04.390 -03:00 [INF] Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService Health Check enabled at: '/health'
+2025-09-08 22:57:04.583 -03:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using 'C:\Users\dnumajiri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-08 22:57:04.677 -03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5119
+2025-09-08 22:57:04.679 -03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-08 22:57:04.681 -03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-08 22:57:04.682 -03:00 [INF] Microsoft.Hosting.Lifetime Content root path: C:\Git\Ambev.DeveloperEvaluation\backend\src\Ambev.DeveloperEvaluation.WebApi
+2025-09-08 22:57:18.110 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/Users - application/json 392
+2025-09-08 22:57:18.159 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:57:18.186 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "CreateUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(Ambev.DeveloperEvaluation.WebApi.Features.Users.CreateUser.CreateUserRequest, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 22:57:18.375 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.List`1[[FluentValidation.Results.ValidationFailure, FluentValidation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0]]'.
+2025-09-08 22:57:18.400 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi) in 207.4555ms
+2025-09-08 22:57:18.404 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:57:18.408 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/Users - 400 null application/json; charset=utf-8 298.2754ms
+2025-09-08 22:57:54.681 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/Users - application/json 391
+2025-09-08 22:57:54.686 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:57:54.688 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "CreateUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(Ambev.DeveloperEvaluation.WebApi.Features.Users.CreateUser.CreateUserRequest, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 22:57:54.693 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.List`1[[FluentValidation.Results.ValidationFailure, FluentValidation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0]]'.
+2025-09-08 22:57:54.697 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi) in 6.6232ms
+2025-09-08 22:57:54.700 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:57:54.704 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/Users - 400 null application/json; charset=utf-8 21.4436ms
+2025-09-08 22:58:00.337 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/Users - application/json 390
+2025-09-08 22:58:00.343 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:58:00.344 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "CreateUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(Ambev.DeveloperEvaluation.WebApi.Features.Users.CreateUser.CreateUserRequest, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 22:58:00.347 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.List`1[[FluentValidation.Results.ValidationFailure, FluentValidation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0]]'.
+2025-09-08 22:58:00.349 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi) in 2.6379ms
+2025-09-08 22:58:00.352 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:58:00.355 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/Users - 400 null application/json; charset=utf-8 17.2314ms
+2025-09-08 22:58:07.435 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/Users - application/json 388
+2025-09-08 22:58:07.438 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:58:07.439 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "CreateUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(Ambev.DeveloperEvaluation.WebApi.Features.Users.CreateUser.CreateUserRequest, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 22:58:08.460 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi) in 1019.6512ms
+2025-09-08 22:58:08.463 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:58:08.484 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/Users - 500 null text/plain; charset=utf-8 1048.5616ms
+2025-09-08 22:59:19.757 -03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-08 22:59:52.153 -03:00 [INF] Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService Health Check enabled at: '/health'
+2025-09-08 22:59:52.265 -03:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using 'C:\Users\dnumajiri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-08 22:59:52.335 -03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5119
+2025-09-08 22:59:52.337 -03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-08 22:59:52.339 -03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-08 22:59:52.340 -03:00 [INF] Microsoft.Hosting.Lifetime Content root path: C:\Git\Ambev.DeveloperEvaluation\backend\src\Ambev.DeveloperEvaluation.WebApi
+2025-09-08 22:59:56.074 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/Users - application/json 388
+2025-09-08 22:59:56.139 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:59:56.170 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "CreateUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(Ambev.DeveloperEvaluation.WebApi.Features.Users.CreateUser.CreateUserRequest, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 22:59:57.660 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (52ms) [Parameters=[@__email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Password", u."Phone", u."Role", u."Status", u."UpdatedAt", u."Username", u."Address_City", u."Address_Number", u."Address_Street", u."Address_Zipcode", u."Address_Geolocation_Lat", u."Address_Geolocation_Long", u."Name_Firstname", u."Name_Lastname"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 1
+2025-09-08 22:59:58.430 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (22ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?', @p4='?', @p5='?', @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?' (DbType = Int32), @p10='?', @p11='?', @p12='?', @p13='?', @p14='?', @p15='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("CreatedAt", "Email", "Password", "Phone", "Role", "Status", "UpdatedAt", "Username", "Address_City", "Address_Number", "Address_Street", "Address_Zipcode", "Address_Geolocation_Lat", "Address_Geolocation_Long", "Name_Firstname", "Name_Lastname")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15)
+RETURNING "Id";
+2025-09-08 22:59:58.481 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing CreatedResult, writing value of type 'Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Features.Users.CreateUser.CreateUserResponse, Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-08 22:59:58.518 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi) in 2338.5778ms
+2025-09-08 22:59:58.523 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 22:59:58.536 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/Users - 201 null application/json; charset=utf-8 2463.8948ms
+2025-09-08 23:00:20.145 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - application/json 388
+2025-09-08 23:00:20.150 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint '405 HTTP Method Not Supported'
+2025-09-08 23:00:20.151 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint '405 HTTP Method Not Supported'
+2025-09-08 23:00:20.153 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - 405 0 null 8.1309ms
+2025-09-08 23:01:18.841 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - null null
+2025-09-08 23:01:18.848 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:01:18.854 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser(System.Guid, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 23:01:18.902 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Password", u."Phone", u."Role", u."Status", u."UpdatedAt", u."Username", u."Address_City", u."Address_Number", u."Address_Street", u."Address_Zipcode", u."Address_Geolocation_Lat", u."Address_Geolocation_Long", u."Name_Firstname", u."Name_Lastname"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-09-08 23:01:18.933 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi) in 77.4801ms
+2025-09-08 23:01:18.936 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:01:18.965 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - 500 null text/plain; charset=utf-8 123.9259ms
+2025-09-08 23:03:42.141 -03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-08 23:03:50.867 -03:00 [INF] Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService Health Check enabled at: '/health'
+2025-09-08 23:03:51.031 -03:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using 'C:\Users\dnumajiri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-08 23:03:51.120 -03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5119
+2025-09-08 23:03:51.122 -03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-08 23:03:51.123 -03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-08 23:03:51.125 -03:00 [INF] Microsoft.Hosting.Lifetime Content root path: C:\Git\Ambev.DeveloperEvaluation\backend\src\Ambev.DeveloperEvaluation.WebApi
+2025-09-08 23:03:55.204 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - null null
+2025-09-08 23:03:55.310 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:03:55.344 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser(System.Guid, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 23:03:57.257 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (68ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Password", u."Phone", u."Role", u."Status", u."UpdatedAt", u."Username", u."Address_City", u."Address_Number", u."Address_Street", u."Address_Zipcode", u."Address_Geolocation_Lat", u."Address_Geolocation_Long", u."Name_Firstname", u."Name_Lastname"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-09-08 23:03:57.461 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type 'Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Features.Users.GetUser.GetUserResponse, Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-08 23:03:57.519 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi) in 2167.6963ms
+2025-09-08 23:03:57.524 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:03:57.538 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - 200 null application/json; charset=utf-8 2336.8883ms
+2025-09-08 23:05:42.075 -03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-08 23:05:49.659 -03:00 [INF] Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService Health Check enabled at: '/health'
+2025-09-08 23:05:49.767 -03:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using 'C:\Users\dnumajiri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-08 23:05:49.837 -03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5119
+2025-09-08 23:05:49.840 -03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-08 23:05:49.842 -03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-08 23:05:49.843 -03:00 [INF] Microsoft.Hosting.Lifetime Content root path: C:\Git\Ambev.DeveloperEvaluation\backend\src\Ambev.DeveloperEvaluation.WebApi
+2025-09-08 23:05:54.149 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - null null
+2025-09-08 23:05:54.206 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:05:54.226 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser(System.Guid, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 23:05:55.895 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (73ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Password", u."Phone", u."Role", u."Status", u."UpdatedAt", u."Username", u."Address_City", u."Address_Number", u."Address_Street", u."Address_Zipcode", u."Address_Geolocation_Lat", u."Address_Geolocation_Long", u."Name_Firstname", u."Name_Lastname"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-09-08 23:05:56.080 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type 'Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Features.Users.GetUser.GetUserResponse, Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-08 23:05:56.136 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi) in 1901.0574ms
+2025-09-08 23:05:56.141 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:05:56.153 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - 200 null application/json; charset=utf-8 2005.5156ms
+2025-09-08 23:06:01.144 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - null null
+2025-09-08 23:06:01.150 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:06:01.152 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser(System.Guid, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 23:06:01.186 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Password", u."Phone", u."Role", u."Status", u."UpdatedAt", u."Username", u."Address_City", u."Address_Number", u."Address_Street", u."Address_Zipcode", u."Address_Geolocation_Lat", u."Address_Geolocation_Long", u."Name_Firstname", u."Name_Lastname"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-09-08 23:06:01.190 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type 'Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Features.Users.GetUser.GetUserResponse, Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-08 23:06:01.192 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi) in 38.1706ms
+2025-09-08 23:06:01.194 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:06:01.197 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - 200 null application/json; charset=utf-8 52.6164ms
+2025-09-08 23:06:15.857 -03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-08 23:07:01.286 -03:00 [INF] Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService Health Check enabled at: '/health'
+2025-09-08 23:07:01.395 -03:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using 'C:\Users\dnumajiri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-08 23:07:01.465 -03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5119
+2025-09-08 23:07:01.467 -03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-08 23:07:01.469 -03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-08 23:07:01.470 -03:00 [INF] Microsoft.Hosting.Lifetime Content root path: C:\Git\Ambev.DeveloperEvaluation\backend\src\Ambev.DeveloperEvaluation.WebApi
+2025-09-08 23:07:04.942 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - null null
+2025-09-08 23:07:05.010 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:07:05.033 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser(System.Guid, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 23:07:06.304 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (44ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Password", u."Phone", u."Role", u."Status", u."UpdatedAt", u."Username", u."Address_City", u."Address_Number", u."Address_Street", u."Address_Zipcode", u."Address_Geolocation_Lat", u."Address_Geolocation_Long", u."Name_Firstname", u."Name_Lastname"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-09-08 23:07:06.430 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type 'Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Features.Users.GetUser.GetUserResponse, Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-08 23:07:06.469 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi) in 1430.9848ms
+2025-09-08 23:07:06.473 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:07:06.486 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - 200 null application/json; charset=utf-8 1544.4979ms
+2025-09-08 23:08:30.391 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - null null
+2025-09-08 23:08:30.396 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:08:30.398 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser(System.Guid, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 23:08:30.427 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Password", u."Phone", u."Role", u."Status", u."UpdatedAt", u."Username", u."Address_City", u."Address_Number", u."Address_Street", u."Address_Zipcode", u."Address_Geolocation_Lat", u."Address_Geolocation_Long", u."Name_Firstname", u."Name_Lastname"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-09-08 23:08:30.433 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type 'Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Features.Users.GetUser.GetUserResponse, Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-08 23:08:30.435 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi) in 35.4061ms
+2025-09-08 23:08:30.437 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:08:30.438 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - 200 null application/json; charset=utf-8 47.2138ms
+2025-09-08 23:09:02.219 -03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-08 23:09:41.337 -03:00 [INF] Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService Health Check enabled at: '/health'
+2025-09-08 23:09:41.470 -03:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using 'C:\Users\dnumajiri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-08 23:09:41.552 -03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5119
+2025-09-08 23:09:41.555 -03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-08 23:09:41.557 -03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-08 23:09:41.558 -03:00 [INF] Microsoft.Hosting.Lifetime Content root path: C:\Git\Ambev.DeveloperEvaluation\backend\src\Ambev.DeveloperEvaluation.WebApi
+2025-09-08 23:09:48.443 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - null null
+2025-09-08 23:09:48.516 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:09:48.537 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser(System.Guid, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 23:09:50.005 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (85ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Password", u."Phone", u."Role", u."Status", u."UpdatedAt", u."Username", u."Address_City", u."Address_Number", u."Address_Street", u."Address_Zipcode", u."Address_Geolocation_Lat", u."Address_Geolocation_Long", u."Name_Firstname", u."Name_Lastname"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-09-08 23:09:50.265 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type 'Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Features.Users.GetUser.GetUserResponse, Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-08 23:09:50.331 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi) in 1785.4357ms
+2025-09-08 23:09:50.336 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:09:50.351 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - 200 null application/json; charset=utf-8 1909.6142ms
+2025-09-08 23:10:01.494 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - null null
+2025-09-08 23:10:01.501 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:10:01.502 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser(System.Guid, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 23:10:01.537 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Password", u."Phone", u."Role", u."Status", u."UpdatedAt", u."Username", u."Address_City", u."Address_Number", u."Address_Street", u."Address_Zipcode", u."Address_Geolocation_Lat", u."Address_Geolocation_Long", u."Name_Firstname", u."Name_Lastname"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-09-08 23:10:01.546 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type 'Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Features.Users.GetUser.GetUserResponse, Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-08 23:10:01.549 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi) in 44.6847ms
+2025-09-08 23:10:01.551 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:10:01.553 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - 200 null application/json; charset=utf-8 59.8229ms
+2025-09-08 23:10:09.230 -03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-08 23:14:03.891 -03:00 [INF] Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService Health Check enabled at: '/health'
+2025-09-08 23:14:04.060 -03:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using 'C:\Users\dnumajiri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-08 23:14:04.209 -03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5119
+2025-09-08 23:14:04.211 -03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-08 23:14:04.213 -03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-08 23:14:04.215 -03:00 [INF] Microsoft.Hosting.Lifetime Content root path: C:\Git\Ambev.DeveloperEvaluation\backend\src\Ambev.DeveloperEvaluation.WebApi
+2025-09-08 23:14:07.814 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - null null
+2025-09-08 23:14:07.877 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:14:07.905 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser(System.Guid, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 23:14:09.273 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (54ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Password", u."Phone", u."Role", u."Status", u."UpdatedAt", u."Username", u."Address_City", u."Address_Number", u."Address_Street", u."Address_Zipcode", u."Address_Geolocation_Lat", u."Address_Geolocation_Long", u."Name_Firstname", u."Name_Lastname"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-09-08 23:14:09.426 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type 'Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Features.Users.GetUser.GetUserResponse, Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-08 23:14:09.473 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi) in 1560.6768ms
+2025-09-08 23:14:09.479 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:14:09.492 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - 200 null application/json; charset=utf-8 1679.0192ms
+2025-09-08 23:15:25.619 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 DELETE http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - null null
+2025-09-08 23:15:25.624 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.DeleteUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:15:25.634 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "DeleteUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteUser(System.Guid, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 23:15:25.683 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Password", u."Phone", u."Role", u."Status", u."UpdatedAt", u."Username", u."Address_City", u."Address_Number", u."Address_Street", u."Address_Zipcode", u."Address_Geolocation_Lat", u."Address_Geolocation_Long", u."Name_Firstname", u."Name_Lastname"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-09-08 23:15:25.804 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Users"
+WHERE "Id" = @p0;
+2025-09-08 23:15:25.828 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type 'Ambev.DeveloperEvaluation.WebApi.Common.ApiResponse'.
+2025-09-08 23:15:25.835 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.DeleteUser (Ambev.DeveloperEvaluation.WebApi) in 196.4266ms
+2025-09-08 23:15:25.837 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.DeleteUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:15:25.840 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 DELETE http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - 200 null application/json; charset=utf-8 220.605ms
+2025-09-08 23:15:31.100 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - null null
+2025-09-08 23:15:31.108 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:15:31.110 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser(System.Guid, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 23:15:31.173 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Password", u."Phone", u."Role", u."Status", u."UpdatedAt", u."Username", u."Address_City", u."Address_Number", u."Address_Street", u."Address_Zipcode", u."Address_Geolocation_Lat", u."Address_Geolocation_Long", u."Name_Firstname", u."Name_Lastname"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-09-08 23:15:31.177 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi) in 63.9238ms
+2025-09-08 23:15:31.178 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:15:31.193 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - 500 null text/plain; charset=utf-8 92.8445ms
+2025-09-08 23:17:21.483 -03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-08 23:21:25.404 -03:00 [INF] Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService Health Check enabled at: '/health'
+2025-09-08 23:21:25.596 -03:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using 'C:\Users\dnumajiri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-08 23:21:25.715 -03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5119
+2025-09-08 23:21:25.718 -03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-08 23:21:25.720 -03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-08 23:21:25.721 -03:00 [INF] Microsoft.Hosting.Lifetime Content root path: C:\Git\Ambev.DeveloperEvaluation\backend\src\Ambev.DeveloperEvaluation.WebApi
+2025-09-08 23:21:45.231 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - null null
+2025-09-08 23:21:45.288 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:21:45.309 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser(System.Guid, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 23:21:46.517 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (44ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Password", u."Phone", u."Role", u."Status", u."UpdatedAt", u."Username", u."Address_City", u."Address_Number", u."Address_Street", u."Address_Zipcode", u."Address_Geolocation_Lat", u."Address_Geolocation_Long", u."Name_Firstname", u."Name_Lastname"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-09-08 23:21:46.540 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing ObjectResult, writing value of type 'Ambev.DeveloperEvaluation.WebApi.Common.ApiErrorResponse'.
+2025-09-08 23:21:46.558 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi) in 1242.9611ms
+2025-09-08 23:21:46.562 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.GetUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:21:46.573 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - 500 null application/json; charset=utf-8 1346.0086ms
+2025-09-08 23:22:03.099 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 DELETE http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - null null
+2025-09-08 23:22:03.106 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.DeleteUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:22:03.114 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "DeleteUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteUser(System.Guid, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-08 23:22:03.153 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Password", u."Phone", u."Role", u."Status", u."UpdatedAt", u."Username", u."Address_City", u."Address_Number", u."Address_Street", u."Address_Zipcode", u."Address_Geolocation_Lat", u."Address_Geolocation_Long", u."Name_Firstname", u."Name_Lastname"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-09-08 23:22:03.156 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing ObjectResult, writing value of type 'Ambev.DeveloperEvaluation.WebApi.Common.ApiErrorResponse'.
+2025-09-08 23:22:03.158 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.DeleteUser (Ambev.DeveloperEvaluation.WebApi) in 42.5839ms
+2025-09-08 23:22:03.160 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.DeleteUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-08 23:22:03.163 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 DELETE http://localhost:5119/api/Users/9910f566-77bd-42ba-b356-aac22716fbed - 500 null application/json; charset=utf-8 64.4678ms
