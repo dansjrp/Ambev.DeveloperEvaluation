@@ -14,10 +14,14 @@ namespace Ambev.DeveloperEvaluation.Domain.Entities;
 public class User : BaseEntity, IUser
 {
     /// <summary>
-    /// Gets the user's full name.
-    /// Must not be null or empty and should contain both first and last names.
+    /// Gets the user's username.
     /// </summary>
     public string Username { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Gets the user's name (firstname, lastname).
+    /// </summary>
+    public Name Name { get; set; } = new Name();
 
     /// <summary>
     /// Gets the user's email address.
@@ -29,7 +33,12 @@ public class User : BaseEntity, IUser
     /// Gets the user's phone number.
     /// Must be a valid phone number format following the pattern (XX) XXXXX-XXXX.
     /// </summary>
-    public string Phone { get; set; } = string.Empty ;
+    public string Phone { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Gets the user's address (city, street, number, zipcode, geolocation).
+    /// </summary>
+    public Address Address { get; set; } = new Address();
 
     /// <summary>
     /// Gets the hashed password for authentication.
