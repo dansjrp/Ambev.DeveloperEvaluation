@@ -16,6 +16,6 @@ public class GetUserProfile : Profile
             .ConstructUsing(id => new Application.Users.GetUser.GetUserCommand(id));
 
         // Mapeamento de GetUserResult para GetUserResponse
-        CreateMap<Application.Users.GetUser.GetUserResult, GetUserResponse>();
+    CreateMap<Application.Users.GetUser.GetUserResult, GetUserResponse>();
     }
 }

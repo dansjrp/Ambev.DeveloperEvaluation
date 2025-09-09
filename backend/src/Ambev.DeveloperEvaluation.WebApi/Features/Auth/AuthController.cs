@@ -44,16 +44,26 @@ public class AuthController : BaseController
         var validationResult = await validator.ValidateAsync(request, cancellationToken);
 
         if (!validationResult.IsValid)
-            return BadRequest(validationResult.Errors);
+            return ValidationError(string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage)));
 
-        var command = _mapper.Map<AuthenticateUserCommand>(request);
-        var response = await _mediator.Send(command, cancellationToken);
-
-        return Ok(new ApiResponseWithData<AuthenticateUserResponse>
+        try
         {
-            Success = true,
-            Message = "User authenticated successfully",
-            Data = _mapper.Map<AuthenticateUserResponse>(response)
-        });
+            var command = _mapper.Map<AuthenticateUserCommand>(request);
+            var response = await _mediator.Send(command, cancellationToken);
+
+            if (response == null || string.IsNullOrEmpty(response.Token))
+                return AuthenticationError("Invalid credentials or authentication failed.");
+
+            return Ok(new ApiResponseWithData<AuthenticateUserResponse>
+            {
+                Success = true,
+                Message = "User authenticated successfully",
+                Data = _mapper.Map<AuthenticateUserResponse>(response)
+            });
+        }
+        catch (Exception ex)
+        {
+            return InternalServerError(ex.Message);
+        }
     }
 }

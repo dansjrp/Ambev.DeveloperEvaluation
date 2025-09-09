@@ -47,15 +47,7 @@ public class UsersController : BaseController
         var validationResult = await validator.ValidateAsync(request, cancellationToken);
 
         if (!validationResult.IsValid)
-        {
-            var errorResponse = new ApiErrorResponse
-            {
-                Type = "ValidationError",
-                Error = "Invalid input data",
-                Detail = string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage))
-            };
-            return BadRequest(errorResponse);
-        }
+            return ValidationError(string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage)));
 
         var command = _mapper.Map<CreateUserCommand>(request);
         var response = await _mediator.Send(command, cancellationToken);
@@ -85,42 +77,20 @@ public class UsersController : BaseController
         var validationResult = await validator.ValidateAsync(request, cancellationToken);
 
         if (!validationResult.IsValid)
-        {
-            var errorResponse = new ApiErrorResponse
-            {
-                Type = "ValidationError",
-                Error = "Invalid input data",
-                Detail = string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage))
-            };
-            return BadRequest(errorResponse);
-        }
+            return ValidationError(string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage)));
 
         var command = _mapper.Map<GetUserCommand>(request.Id);
         try
         {
             var result = await _mediator.Send(command, cancellationToken);
             if (result == null)
-            {
-                var errorResponse = new ApiErrorResponse
-                {
-                    Type = "ResourceNotFound",
-                    Error = "User not found",
-                    Detail = $"The user with ID {id} does not exist in our database"
-                };
-                return NotFound(errorResponse);
-            }
+                return ResourceNotFound("User not found", $"The user with ID {id} does not exist in our database");
             var userResponse = _mapper.Map<GetUserResponse>(result);
             return Ok(userResponse);
         }
         catch (Exception ex)
         {
-            var errorResponse = new ApiErrorResponse
-            {
-                Type = "InternalServerError",
-                Error = "An unexpected error occurred",
-                Detail = ex.Message
-            };
-            return StatusCode(500, errorResponse);
+            return InternalServerError(ex.Message);
         }
     }
 
@@ -141,30 +111,14 @@ public class UsersController : BaseController
         var validationResult = await validator.ValidateAsync(request, cancellationToken);
 
         if (!validationResult.IsValid)
-        {
-            var errorResponse = new ApiErrorResponse
-            {
-                Type = "ValidationError",
-                Error = "Invalid input data",
-                Detail = string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage))
-            };
-            return BadRequest(errorResponse);
-        }
+            return ValidationError(string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage)));
 
         var command = _mapper.Map<DeleteUserCommand>(request.Id);
         try
         {
             var result = await _mediator.Send(command, cancellationToken);
             if (result == null)
-            {
-                var errorResponse = new ApiErrorResponse
-                {
-                    Type = "ResourceNotFound",
-                    Error = "User not found",
-                    Detail = $"The user with ID {id} does not exist in our database"
-                };
-                return NotFound(errorResponse);
-            }
+                return ResourceNotFound("User not found", $"The user with ID {id} does not exist in our database");
             return Ok(new ApiResponse
             {
                 Success = true,
@@ -173,13 +127,7 @@ public class UsersController : BaseController
         }
         catch (Exception ex)
         {
-            var errorResponse = new ApiErrorResponse
-            {
-                Type = "InternalServerError",
-                Error = "An unexpected error occurred",
-                Detail = ex.Message
-            };
-            return StatusCode(500, errorResponse);
+            return InternalServerError(ex.Message);
         }
     }
 }
