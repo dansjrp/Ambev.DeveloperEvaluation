@@ -8,6 +8,15 @@ namespace Ambev.DeveloperEvaluation.Domain.Repositories;
 public interface IUserRepository
 {
     /// <summary>
+    /// Retrieves paginated users
+    /// </summary>
+    /// <param name="page">Page number</param>
+    /// <param name="size">Page size</param>
+    /// <param name="order">Ordering string</param>
+    /// <param name="cancellationToken">Cancellation token</param>
+    /// <returns>Tuple with users, total count</returns>
+    Task<(IEnumerable<User> Users, int TotalCount)> GetPaginatedAsync(int page, int size, string? order, CancellationToken cancellationToken = default);
+    /// <summary>
     /// Creates a new user in the repository
     /// </summary>
     /// <param name="user">The user to create</param>

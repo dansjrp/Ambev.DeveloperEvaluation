@@ -21,16 +21,41 @@ public class UsersController : BaseController
     private readonly IMediator _mediator;
     private readonly IMapper _mapper;
 
-    /// <summary>
-    /// Initializes a new instance of UsersController
-    /// </summary>
-    /// <param name="mediator">The mediator instance</param>
-    /// <param name="mapper">The AutoMapper instance</param>
     public UsersController(IMediator mediator, IMapper mapper)
     {
         _mediator = mediator;
         _mapper = mapper;
     }
+
+    /// <summary>
+    /// Retrieves all users paginated
+    /// </summary>
+    /// <param name="page">Page number</param>
+    /// <param name="size">Number of items per page</param>
+    /// <param name="order">Ordering of results</param>
+    /// <param name="cancellationToken">Cancellation token</param>
+    /// <returns>Paged list of users</returns>
+    [HttpGet]
+    [ProducesResponseType(typeof(PaginatedResponse<GetUserResponse>), StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetAllUsers(
+        [FromQuery(Name = "_page")] int page = 1,
+        [FromQuery(Name = "_size")] int size = 10,
+        [FromQuery(Name = "_order")] string? order = null,
+        CancellationToken cancellationToken = default)
+    {
+        var command = new GetUsersCommand
+        {
+            Page = page,
+            Size = size,
+            Order = order
+        };
+
+        var result = await _mediator.Send(command, cancellationToken);
+        var mapped = result.Users.Select(u => _mapper.Map<GetUserResponse>(u)).ToList();
+
+        return OkPaginated(new PaginatedList<GetUserResponse>(mapped, result.TotalCount, result.CurrentPage, result.TotalPages));
+    }
+
 
     /// <summary>
     /// Creates a new user

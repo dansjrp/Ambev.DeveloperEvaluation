@@ -41,7 +41,7 @@ public class UserRepository : IUserRepository
     /// <returns>The user if found, null otherwise</returns>
     public async Task<User?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
     {
-        return await _context.Users.FirstOrDefaultAsync(o=> o.Id == id, cancellationToken);
+        return await _context.Users.FirstOrDefaultAsync(o => o.Id == id, cancellationToken);
     }
 
     /// <summary>
@@ -71,5 +71,43 @@ public class UserRepository : IUserRepository
         _context.Users.Remove(user);
         await _context.SaveChangesAsync(cancellationToken);
         return true;
+    }
+
+    /// <summary>
+    /// Retorna uma lista paginada de usuários, ordenada conforme parâmetros informados.
+    /// </summary>
+    /// <param name="page">Número da página (inicia em 1).</param>
+    /// <param name="size">Quantidade de itens por página.</param>
+    /// <param name="order">
+    /// String de ordenação, exemplo: "username asc, email desc".
+    /// Campos suportados: username, email.
+    /// </param>
+    /// <param name="cancellationToken">Token de cancelamento da operação.</param>
+    /// <returns>
+    /// Uma tupla contendo a lista de usuários da página e o total de registros.
+    /// </returns>
+    public async Task<(IEnumerable<User> Users, int TotalCount)> GetPaginatedAsync(int page, int size, string? order, CancellationToken cancellationToken = default)
+    {
+        var query = _context.Users.AsNoTracking();
+
+        // Ordering
+        if (!string.IsNullOrWhiteSpace(order))
+        {
+            foreach (var ord in order.Split(','))
+            {
+                var parts = ord.Trim().Split(' ');
+                var prop = parts[0];
+                var dir = parts.Length > 1 ? parts[1].ToLower() : "asc";
+                if (prop == "username")
+                    query = dir == "desc" ? query.OrderByDescending(u => u.Username) : query.OrderBy(u => u.Username);
+                else if (prop == "email")
+                    query = dir == "desc" ? query.OrderByDescending(u => u.Email) : query.OrderBy(u => u.Email);
+                // Adicione outros campos conforme necessário
+            }
+        }
+
+        var totalCount = await query.CountAsync(cancellationToken);
+        var users = await query.Skip((page - 1) * size).Take(size).ToListAsync(cancellationToken);
+        return (users, totalCount);
     }
 }
