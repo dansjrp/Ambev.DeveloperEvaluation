@@ -7,30 +7,19 @@ namespace Ambev.DeveloperEvaluation.WebApi.Features.Users.GetUser;
 /// </summary>
 public class GetUserResponse
 {
-    /// <summary>
-    /// The user's first name
-    /// </summary>
-    public string Firstname { get; set; } = string.Empty;
+    public string Username { get; set; } = string.Empty;
+    public string Password { get; set; } = string.Empty;
 
-    /// <summary>
-    /// The user's last name
-    /// </summary>
-    public string Lastname { get; set; } = string.Empty;
-
+    public Domain.Entities.Name Name { get; set; } = new Domain.Entities.Name();
     /// <summary>
     /// The user's address
     /// </summary>
-    public Ambev.DeveloperEvaluation.Domain.Entities.Address Address { get; set; } = new Ambev.DeveloperEvaluation.Domain.Entities.Address();
+    public Domain.Entities.Address Address { get; set; } = new Domain.Entities.Address();
 
     /// <summary>
     /// The unique identifier of the user
     /// </summary>
     public Guid Id { get; set; }
-
-    /// <summary>
-    /// The user's full name
-    /// </summary>
-    public string Name { get; set; } = string.Empty;
 
     /// <summary>
     /// The user's email address

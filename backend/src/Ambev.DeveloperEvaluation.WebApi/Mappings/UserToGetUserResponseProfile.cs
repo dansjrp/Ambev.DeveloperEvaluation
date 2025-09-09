@@ -9,8 +9,6 @@ public class UserToGetUserResponseProfile : Profile
     public UserToGetUserResponseProfile()
     {
         CreateMap<User, GetUserResponse>()
-            .ForMember(dest => dest.Firstname, opt => opt.MapFrom(src => src.Name.Firstname))
-            .ForMember(dest => dest.Lastname, opt => opt.MapFrom(src => src.Name.Lastname))
             .ForMember(dest => dest.Name, opt => opt.MapFrom(src => $"{src.Name.Firstname} {src.Name.Lastname}"))
             .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
             .ForMember(dest => dest.Phone, opt => opt.MapFrom(src => src.Phone))

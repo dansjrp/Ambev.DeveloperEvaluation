@@ -26,7 +26,13 @@ public class GetUsersHandler : IRequestHandler<GetUsersCommand, GetUsersResult>
             Users = users.Select(u => new GetUserResult
             {
                 Id = u.Id,
-                Name = $"{u.Name.Firstname} {u.Name.Lastname}",
+                Username = u.Username,
+                Password = u.Password,
+                Name = new Domain.Entities.Name {
+                    Firstname = u.Name?.Firstname ?? string.Empty,
+                    Lastname = u.Name?.Lastname ?? string.Empty
+                },
+                Address = u.Address,
                 Email = u.Email,
                 Phone = u.Phone,
                 Role = u.Role,

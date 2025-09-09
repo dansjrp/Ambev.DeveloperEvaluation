@@ -6,6 +6,10 @@ namespace Ambev.DeveloperEvaluation.Domain.Repositories;
 
 public interface IProductRepository
 {
+    /// <summary>
+    /// Retorna os IDs dos produtos existentes a partir de uma lista de IDs informada.
+    /// </summary>
+    Task<List<Guid>> GetExistingProductIdsAsync(IEnumerable<Guid> productIds, CancellationToken cancellationToken);
     Task<Product?> GetByIdAsync(Guid id, CancellationToken cancellationToken);
     Task<IEnumerable<Product>> GetAllAsync(CancellationToken cancellationToken);
     Task<(IEnumerable<Product> Products, int TotalCount)> GetPaginatedAsync(int page, int pageSize, string? order, CancellationToken cancellationToken);

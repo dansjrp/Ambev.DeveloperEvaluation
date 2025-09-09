@@ -6,9 +6,9 @@ namespace Ambev.DeveloperEvaluation.Domain.Repositories;
 
 public interface ICartRepository
 {
-    Task<Cart?> GetByIdAsync(int id);
-    Task<IEnumerable<Cart>> GetAllAsync();
+    Task<Cart?> GetByIdAsync(Guid id);
+    Task<(IEnumerable<Cart> Carts, int TotalCount)> GetPaginatedAsync(int page, int pageSize, string? orderBy);
     Task AddAsync(Cart cart);
     Task UpdateAsync(Cart cart);
-    Task DeleteAsync(int id);
+    Task<bool> DeleteAsync(Guid id);
 }

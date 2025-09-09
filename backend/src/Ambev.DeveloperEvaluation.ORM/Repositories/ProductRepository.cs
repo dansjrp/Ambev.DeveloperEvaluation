@@ -3,11 +3,21 @@ using Ambev.DeveloperEvaluation.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Ambev.DeveloperEvaluation.ORM.Extension;
 
 namespace Ambev.DeveloperEvaluation.ORM.Repositories;
 
 public class ProductRepository : IProductRepository
 {
+
+
+    public async Task<List<Guid>> GetExistingProductIdsAsync(IEnumerable<Guid> productIds, CancellationToken cancellationToken)
+    {
+        return await _context.Products
+            .Where(p => productIds.Contains(p.Id))
+            .Select(p => p.Id)
+            .ToListAsync(cancellationToken);
+    }
     private readonly DefaultContext _context;
     public ProductRepository(DefaultContext context)
     {
@@ -22,26 +32,18 @@ public class ProductRepository : IProductRepository
 
     public async Task<(IEnumerable<Product> Products, int TotalCount)> GetPaginatedAsync(int page, int pageSize, string? order, CancellationToken cancellationToken)
     {
-        var query = _context.Products.AsNoTracking();
-
-        // Ordering
-        if (!string.IsNullOrWhiteSpace(order))
+        var query = _context.Products.AsQueryable();
+        // Ordenação dinâmica (exemplo: "title asc,price desc")
+        if (!string.IsNullOrEmpty(order))
         {
             foreach (var ord in order.Split(','))
             {
                 var parts = ord.Trim().Split(' ');
-                var prop = parts[0];
-                var dir = parts.Length > 1 ? parts[1].ToLower() : "asc";
-                if (prop == "title")
-                    query = dir == "desc" ? query.OrderByDescending(p => p.Title) : query.OrderBy(p => p.Title);
-                else if (prop == "price")
-                    query = dir == "desc" ? query.OrderByDescending(p => p.Price) : query.OrderBy(p => p.Price);
-                else if (prop == "category")
-                    query = dir == "desc" ? query.OrderByDescending(p => p.Category) : query.OrderBy(p => p.Category);
-                // Adicione outros campos conforme necessário
+                var property = parts[0];
+                var direction = parts.Length > 1 && parts[1].ToLower() == "desc" ? false : true;
+                query = direction ? query.OrderByDynamic(property) : query.OrderByDynamicDescending(property);
             }
         }
-
         var totalCount = await query.CountAsync(cancellationToken);
         var products = await query.Skip((page - 1) * pageSize).Take(pageSize).ToListAsync(cancellationToken);
         return (products, totalCount);
@@ -49,26 +51,18 @@ public class ProductRepository : IProductRepository
 
     public async Task<(IEnumerable<Product> Products, int TotalCount)> GetPaginatedByCategoryAsync(string category, int page, int pageSize, string? order, CancellationToken cancellationToken)
     {
-        var query = _context.Products.AsNoTracking().Where(p => p.Category == category);
-
-        // Ordering
-        if (!string.IsNullOrWhiteSpace(order))
+        var query = _context.Products.AsQueryable().Where(p => p.Category == category);
+        // Ordenação dinâmica (exemplo: "title asc,price desc")
+        if (!string.IsNullOrEmpty(order))
         {
             foreach (var ord in order.Split(','))
             {
                 var parts = ord.Trim().Split(' ');
-                var prop = parts[0];
-                var dir = parts.Length > 1 ? parts[1].ToLower() : "asc";
-                if (prop == "title")
-                    query = dir == "desc" ? query.OrderByDescending(p => p.Title) : query.OrderBy(p => p.Title);
-                else if (prop == "price")
-                    query = dir == "desc" ? query.OrderByDescending(p => p.Price) : query.OrderBy(p => p.Price);
-                else if (prop == "category")
-                    query = dir == "desc" ? query.OrderByDescending(p => p.Category) : query.OrderBy(p => p.Category);
-                // Adicione outros campos conforme necessário
+                var property = parts[0];
+                var direction = parts.Length > 1 && parts[1].ToLower() == "desc" ? false : true;
+                query = direction ? query.OrderByDynamic(property) : query.OrderByDynamicDescending(property);
             }
         }
-
         var totalCount = await query.CountAsync(cancellationToken);
         var products = await query.Skip((page - 1) * pageSize).Take(pageSize).ToListAsync(cancellationToken);
         return (products, totalCount);

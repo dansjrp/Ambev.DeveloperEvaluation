@@ -7,15 +7,14 @@ namespace Ambev.DeveloperEvaluation.Application.Users.GetUser;
 /// </summary>
 public class GetUserResult
 {
+    public string Username { get; set; } = string.Empty;
+    public string Password { get; set; } = string.Empty;
+    public Domain.Entities.Name Name { get; set; } = new Domain.Entities.Name();
+    public Domain.Entities.Address Address { get; set; } = new Domain.Entities.Address();
     /// <summary>
     /// The unique identifier of the user
     /// </summary>
     public Guid Id { get; set; }
-
-    /// <summary>
-    /// The user's full name
-    /// </summary>
-    public string Name { get; set; } = string.Empty;
 
     /// <summary>
     /// The user's email address

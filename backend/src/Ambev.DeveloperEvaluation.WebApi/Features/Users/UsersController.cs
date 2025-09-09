@@ -99,8 +99,8 @@ public class UsersController : BaseController
             var result = await _mediator.Send(command, cancellationToken);
             if (result == null)
                 return ResourceNotFound("User not found", $"The user with ID {id} does not exist in our database");
-            var userResponse = _mapper.Map<GetUserResponse>(result);
-            return Ok(userResponse);
+            //var userResponse = _mapper.Map<GetUserResponse>(result);
+            return Ok(result);
         }
         catch (Exception ex)
         {
@@ -151,9 +151,6 @@ public class UsersController : BaseController
     [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
     public async Task<IActionResult> UpdateUser([FromRoute] Guid id, [FromBody] UpdateUserRequest request, CancellationToken cancellationToken)
     {
-        if (id != request.Id)
-            return ValidationError("O id da rota não corresponde ao id do corpo da requisição.");
-
         var command = _mapper.Map<UpdateUserCommand>(request);
         try
         {

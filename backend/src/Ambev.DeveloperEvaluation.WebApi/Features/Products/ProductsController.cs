@@ -15,15 +15,19 @@ using Ambev.DeveloperEvaluation.Domain.Entities;
 
 namespace Ambev.DeveloperEvaluation.WebApi.Features.Products;
 
+using AutoMapper;
+
 [ApiController]
 [Route("api/[controller]")]
-public class ProductsController : ControllerBase
+public class ProductsController : BaseController
 {
     private readonly IMediator _mediator;
+    private readonly IMapper _mapper;
 
-    public ProductsController(IMediator mediator)
+    public ProductsController(IMediator mediator, IMapper mapper)
     {
         _mediator = mediator;
+        _mapper = mapper;
     }
 
     // GET: api/products/{id}
@@ -61,66 +65,103 @@ public class ProductsController : ControllerBase
     [HttpGet("category/{category}")]
     public async Task<IActionResult> GetProductsByCategory(string category, [FromQuery] int page = 1, [FromQuery] int pageSize = 10, [FromQuery] string? order = null)
     {
-        var (products, totalCount) = await _mediator.Send(new GetProductsByCategoryPaginatedCommand { Category = category, Page = page, PageSize = pageSize, OrderBy = order });
-        var response = new PaginatedResponse<Product>
+        try
         {
-            Data = products,
-            CurrentPage = page,
-            TotalCount = totalCount,
-            TotalPages = (int)Math.Ceiling((double)totalCount / pageSize)
-        };
-        return Ok(response);
+            var (products, totalCount) = await _mediator.Send(new GetProductsByCategoryPaginatedCommand { Category = category, Page = page, PageSize = pageSize, OrderBy = order });
+            if (products == null || !products.Any())
+                return ResourceNotFound("Products not found", $"No products found for category '{category}'");
+            var response = new PaginatedResponse<Product>
+            {
+                Data = products,
+                CurrentPage = page,
+                TotalCount = totalCount,
+                TotalPages = (int)Math.Ceiling((double)totalCount / pageSize)
+            };
+            return Ok(response);
+        }
+        catch (Exception ex)
+        {
+            return InternalServerError(ex.Message);
+        }
     }
 
     // POST: api/products
     [HttpPost]
     public async Task<IActionResult> CreateProduct([FromBody] CreateProductRequest request)
     {
-        var command = new CreateProductCommand
+        try
         {
-            Title = request.Title,
-            Description = request.Description,
-            Price = request.Price,
-            Category = request.Category,
-            // Adicione outros campos conforme necessário
-        };
-        var result = await _mediator.Send(command);
-        var response = new CreateProductResponse
+            var command = new CreateProductCommand
+            {
+                Title = request.Title,
+                Description = request.Description,
+                Price = request.Price,
+                Category = request.Category,
+                Image = request.Image,
+                Rating = request.Rating
+            };
+            var result = await _mediator.Send(command);
+            var response = new CreateProductResponse
+            {
+                Id = result.Id,
+                Title = result.Title,
+                Description = result.Description,
+                Price = result.Price,
+                Category = result.Category,
+                Image = result.Image
+            };
+            return Created(string.Empty, new ApiResponseWithData<CreateProductResponse>
+            {
+                Success = true,
+                Message = "Product created successfully",
+                Data = response
+            });
+        }
+        catch (Exception ex)
         {
-            Id = result.Id,
-            Title = result.Title,
-            Description = result.Description,
-            Price = result.Price,
-            Category = result.Category,
-            Image = result.Image
-        };
-        return CreatedAtAction(nameof(GetProductById), new { id = response.Id }, response);
+            return InternalServerError(ex.Message);
+        }
     }
 
     // PUT: api/products/{id}
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateProduct(Guid id, [FromBody] UpdateProductRequest request)
     {
-        var command = new UpdateProductCommand
+        try
         {
-            Id = id,
-            Title = request.Title,
-            Description = request.Description,
-            Price = request.Price,
-            Category = request.Category,
-            // Adicione outros campos conforme necessário
-        };
-        var result = await _mediator.Send(command);
-        var response = new UpdateProductResponse
+            var command = new UpdateProductCommand
+            {
+                Id = id,
+                Title = request.Title,
+                Description = request.Description,
+                Price = request.Price,
+                Category = request.Category,
+                Image = request.Image,
+                Rating = request.Rating
+            };
+            var result = await _mediator.Send(command);
+            if (result == null)
+                return ResourceNotFound("Product not found", $"The product with ID {id} does not exist in our database");
+            var response = new UpdateProductResponse
+            {
+                Id = result.Id,
+                Title = result.Title,
+                Description = result.Description,
+                Price = result.Price,
+                Category = result.Category,
+                Image = result.Image
+            };
+            return Ok(new ApiResponseWithData<UpdateProductResponse>
+            {
+                Success = true,
+                Message = "Product updated successfully",
+                Data = response
+            });
+        }
+        catch (Exception ex)
         {
-            Id = result.Id,
-            Title = result.Title,
-            Description = result.Description,
-            Price = result.Price,
-            Category = result.Category,
-            Image = result.Image
-        };
-        return Ok(response);
+            return InternalServerError(ex.Message);
+        }
     }
 
     // DELETE: api/products/{id}
@@ -128,15 +169,20 @@ public class ProductsController : ControllerBase
     public async Task<IActionResult> DeleteProduct(Guid id)
     {
         var command = new DeleteProductCommand { Id = id };
-        var result = await _mediator.Send(command);
-        var response = new DeleteProductResponse
+        try
         {
-            Success = result,
-            Message = result ? "Produto deletado com sucesso." : "Produto não encontrado."
-        };
-        if (result)
-            return Ok(response);
-        else
-            return NotFound(response);
+            var result = await _mediator.Send(command);
+            if (!result)
+                return ResourceNotFound("Product not found", $"The product with ID {id} does not exist in our database");
+            return Ok(new ApiResponse
+            {
+                Success = true,
+                Message = "Produto deletado com sucesso."
+            });
+        }
+        catch (Exception ex)
+        {
+            return InternalServerError(ex.Message);
+        }
     }
 }
