@@ -1980,3 +1980,4 @@ LIMIT @__p_2 OFFSET @__p_1
 2025-09-09 14:51:15.493 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Products.ProductsController.GetProductsByCategory (Ambev.DeveloperEvaluation.WebApi) in 23.3554ms
 2025-09-09 14:51:15.495 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Products.ProductsController.GetProductsByCategory (Ambev.DeveloperEvaluation.WebApi)'
 2025-09-09 14:51:15.496 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/api/products/category/Carro?page=1&pageSize=10&order=price%20desc - 200 null application/json; charset=utf-8 48.0239ms
+2025-09-09 15:08:55.469 -03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
