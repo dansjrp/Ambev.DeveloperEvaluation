@@ -15,8 +15,18 @@ public class CartRepository : ICartRepository
         _context = context;
     }
 
-    public async Task<Cart?> GetByIdAsync(Guid id)
-        => await _context.Carts.FindAsync(id);
+    public async Task<Cart?> GetByIdAsync(Guid id, params string[] includes)
+    {
+        var query = _context.Carts.AsQueryable();
+        if (includes != null)
+        {
+            foreach (var include in includes)
+            {
+                query = query.Include(include);
+            }
+        }
+        return await query.FirstOrDefaultAsync(c => c.Id == id);
+    }
 
     public async Task<(IEnumerable<Cart> Carts, int TotalCount)> GetPaginatedAsync(int page, int pageSize, string? orderBy)
     {

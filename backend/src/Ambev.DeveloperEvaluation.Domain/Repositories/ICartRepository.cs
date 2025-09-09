@@ -6,7 +6,7 @@ namespace Ambev.DeveloperEvaluation.Domain.Repositories;
 
 public interface ICartRepository
 {
-    Task<Cart?> GetByIdAsync(Guid id);
+    Task<Cart?> GetByIdAsync(Guid id, params string[] includes);
     Task<(IEnumerable<Cart> Carts, int TotalCount)> GetPaginatedAsync(int page, int pageSize, string? orderBy);
     Task AddAsync(Cart cart);
     Task UpdateAsync(Cart cart);

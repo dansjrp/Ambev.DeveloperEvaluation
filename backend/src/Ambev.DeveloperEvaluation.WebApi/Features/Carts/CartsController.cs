@@ -10,6 +10,7 @@ using MediatR;
 using Ambev.DeveloperEvaluation.WebApi.Features.Carts.CreateCart;
 using Ambev.DeveloperEvaluation.WebApi.Features.Carts.UpdateCart;
 using Ambev.DeveloperEvaluation.WebApi.Features.Carts.GetCart;
+using Ambev.DeveloperEvaluation.WebApi.Features.Carts.CloseCart;
 
 namespace Ambev.DeveloperEvaluation.WebApi.Features.Carts;
 
@@ -141,6 +142,41 @@ public class CartsController : BaseController
                 Items = c.Products.ConvertAll(i => new CartItemResponse { ProductId = i.ProductId, Quantity = i.Quantity })
             });
         }
+        return Ok(response);
+    }
+
+    // POST: api/carts/{cartId}/close
+    [HttpPost("{cartId}/close")]
+    public async Task<IActionResult> CloseCart(Guid cartId, [FromBody] CloseCartRequest request, [FromServices] IMediator mediator)
+    {
+        var command = new Application.Sales.CreateSale.CreateSaleCommand
+        {
+            CartId = cartId,
+            Branch = request.Branch
+        };
+
+        var sale = await mediator.Send(command);
+        if (sale == null)
+            return ResourceNotFound("Sale not created", $"Could not create sale for cart {cartId}.");
+
+        var response = new CloseCart.CloseCartResponse
+        {
+            SaleId = sale.Id,
+            Number = sale.Number,
+            Date = sale.Date,
+            UserId = sale.UserId,
+            Branch = sale.Branch,
+            Total = sale.Total,
+            Items = sale.SaleItems?.Select(i => new CloseCart.CloseCartSaleItemResponse
+            {
+                ProductId = i.ProductId,
+                Quantity = i.Quantity,
+                Price = i.Price,
+                Discounts = i.Discounts,
+                TotalPrice = i.TotalPrice,
+                Cancelled = i.Cancelled
+            }).ToList() ?? new List<CloseCart.CloseCartSaleItemResponse>()
+        };
         return Ok(response);
     }
 }
