@@ -12,15 +12,17 @@ namespace Ambev.DeveloperEvaluation.Application.Sales.CreateSale
 {
     public class CreateSaleHandler : IRequestHandler<CreateSaleCommand, Sale>
     {
-        private readonly ISaleService _saleService;
-        private readonly ISaleRepository _saleRepository;
-        private readonly ICartRepository _cartRepository;
+    private readonly ISaleService _saleService;
+    private readonly ISaleRepository _saleRepository;
+    private readonly ICartRepository _cartRepository;
+    private readonly Rebus.Bus.IBus _bus;
 
-        public CreateSaleHandler(ISaleService saleService, ISaleRepository saleRepository, ICartRepository cartRepository)
+        public CreateSaleHandler(ISaleService saleService, ISaleRepository saleRepository, ICartRepository cartRepository, Rebus.Bus.IBus bus)
         {
             _saleService = saleService;
             _saleRepository = saleRepository;
             _cartRepository = cartRepository;
+            _bus = bus;
         }
 
         public async Task<Sale> Handle(CreateSaleCommand request, CancellationToken cancellationToken)
@@ -64,6 +66,12 @@ namespace Ambev.DeveloperEvaluation.Application.Sales.CreateSale
             }
 
             await _saleRepository.CreateAsync(sale);
+            await _bus.Publish(new Domain.Events.SaleCreatedEvent
+            {
+                SaleId = sale.Id,
+                CreatedAt = sale.Date
+            });
+            
             return sale;
         }
     }
