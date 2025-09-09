@@ -5,7 +5,7 @@ namespace Ambev.DeveloperEvaluation.Common.Validation;
 public class ValidationResultDetail
 {
     public bool IsValid { get; set; }
-    public IEnumerable<ValidationErrorDetail> Errors { get; set; } = [];
+    public IEnumerable<ValidationErrorDetail> Errors { get; set; } = new List<ValidationErrorDetail>();
 
     public ValidationResultDetail()
     {

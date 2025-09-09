@@ -8,6 +8,13 @@ namespace Ambev.DeveloperEvaluation.Domain.Repositories;
 public interface IUserRepository
 {
     /// <summary>
+    /// Atualiza os dados de um usuário existente.
+    /// </summary>
+    /// <param name="user">Usuário com dados atualizados.</param>
+    /// <param name="cancellationToken">Token de cancelamento.</param>
+    /// <returns>Usuário atualizado.</returns>
+    Task<User> UpdateAsync(User user, CancellationToken cancellationToken = default);
+    /// <summary>
     /// Retrieves paginated users
     /// </summary>
     /// <param name="page">Page number</param>

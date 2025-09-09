@@ -22,8 +22,8 @@ public static class LoggingExtension
     /// The destructuring options builder configured with default destructurers and a custom DbUpdateExceptionDestructurer.
     /// </summary>
     static readonly DestructuringOptionsBuilder _destructuringOptionsBuilder = new DestructuringOptionsBuilder()
-        .WithDefaultDestructurers()
-        .WithDestructurers([new DbUpdateExceptionDestructurer()]);
+    .WithDefaultDestructurers()
+    .WithDestructurers(new[] { new DbUpdateExceptionDestructurer() });
 
     /// <summary>
     /// A filter predicate to exclude log events with specific criteria.

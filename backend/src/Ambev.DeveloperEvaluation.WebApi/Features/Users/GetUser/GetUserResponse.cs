@@ -8,6 +8,21 @@ namespace Ambev.DeveloperEvaluation.WebApi.Features.Users.GetUser;
 public class GetUserResponse
 {
     /// <summary>
+    /// The user's first name
+    /// </summary>
+    public string Firstname { get; set; } = string.Empty;
+
+    /// <summary>
+    /// The user's last name
+    /// </summary>
+    public string Lastname { get; set; } = string.Empty;
+
+    /// <summary>
+    /// The user's address
+    /// </summary>
+    public Ambev.DeveloperEvaluation.Domain.Entities.Address Address { get; set; } = new Ambev.DeveloperEvaluation.Domain.Entities.Address();
+
+    /// <summary>
     /// The unique identifier of the user
     /// </summary>
     public Guid Id { get; set; }

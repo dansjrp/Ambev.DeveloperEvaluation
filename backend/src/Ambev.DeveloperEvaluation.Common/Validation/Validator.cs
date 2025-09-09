@@ -20,6 +20,6 @@ public static class Validator
             return result.Errors.Select(o => (ValidationErrorDetail)o);
         }
 
-        return [];
+    return Enumerable.Empty<ValidationErrorDetail>();
     }
 }

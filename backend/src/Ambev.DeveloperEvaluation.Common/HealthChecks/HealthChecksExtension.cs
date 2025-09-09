@@ -43,8 +43,8 @@ public static class HealthChecksExtension
     public static void AddBasicHealthChecks(this WebApplicationBuilder builder)
     {
         builder.Services.AddHealthChecks()
-            .AddCheck("Liveness", () => HealthCheckResult.Healthy(), tags: ["liveness"])
-            .AddCheck("Readiness", () => HealthCheckResult.Healthy(), tags: ["readiness"]);
+            .AddCheck("Liveness", () => HealthCheckResult.Healthy(), tags: new[] { "liveness" })
+            .AddCheck("Readiness", () => HealthCheckResult.Healthy(), tags: new[] { "readiness" });
     }
 
     /// <summary>

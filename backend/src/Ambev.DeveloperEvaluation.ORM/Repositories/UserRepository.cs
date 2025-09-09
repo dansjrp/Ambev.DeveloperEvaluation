@@ -110,4 +110,30 @@ public class UserRepository : IUserRepository
         var users = await query.Skip((page - 1) * size).Take(size).ToListAsync(cancellationToken);
         return (users, totalCount);
     }
+
+    /// <summary>
+    /// Atualiza os dados de um usuário existente.
+    /// </summary>
+    /// <param name="user">Usuário com dados atualizados.</param>
+    /// <param name="cancellationToken">Token de cancelamento.</param>
+    /// <returns>Usuário atualizado.</returns>
+    public async Task<User> UpdateAsync(User user, CancellationToken cancellationToken = default)
+    {
+        var existing = await _context.Users.FirstOrDefaultAsync(u => u.Id == user.Id, cancellationToken);
+        if (existing == null)
+            throw new KeyNotFoundException("Usuário não encontrado para atualização.");
+
+        // Atualiza campos permitidos
+        existing.Name = user.Name;
+        existing.Email = user.Email;
+        existing.Phone = user.Phone;
+        existing.Role = user.Role;
+        existing.Status = user.Status;
+        existing.Address = user.Address;
+        // Adicione outros campos conforme necessário
+
+        _context.Users.Update(existing);
+        await _context.SaveChangesAsync(cancellationToken);
+        return existing;
+    }
 }
