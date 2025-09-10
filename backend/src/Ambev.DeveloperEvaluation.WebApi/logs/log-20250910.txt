@@ -5539,3 +5539,43 @@ LIMIT @__p_1 OFFSET @__p_0
 2025-09-10 18:11:15.580 -03:00 [INF] Rebus.Threading.TaskParallelLibrary.TplAsyncTask Stopping periodic task "CleanupTrackedErrors"
 2025-09-10 18:11:15.585 -03:00 [INF] Rebus.Internals.ConnectionManager Disposing RabbitMQ connection
 2025-09-10 18:11:15.591 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" stopped
+2025-09-10 19:23:55.604 -03:00 [INF] Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService Health Check enabled at: '/health'
+2025-09-10 19:23:56.260 -03:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using 'C:\Users\dnumajiri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-10 19:23:56.789 -03:00 [INF] Rebus.Internals.ConnectionManager Initializing RabbitMQ connection manager for transport with input queue "queue-sale"
+2025-09-10 19:24:35.042 -03:00 [INF] Rebus.Threading.TaskParallelLibrary.TplAsyncTask Starting periodic task "CleanupTrackedErrors" with interval 00:00:10
+2025-09-10 19:24:35.062 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" started
+2025-09-10 19:24:35.066 -03:00 [INF] Rebus.ServiceProvider.Internals.RebusBackgroundService Successfully created bus instance RebusBus Rebus 1 (isDefaultBus: true)
+2025-09-10 19:24:35.096 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" setting number of workers to 1
+2025-09-10 19:24:35.119 -03:00 [INF] Rebus.RabbitMq.RabbitMqTransport Successfully initialized consumer for "queue-sale"
+2025-09-10 19:24:35.155 -03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5119
+2025-09-10 19:24:35.156 -03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-10 19:24:35.157 -03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-10 19:24:35.158 -03:00 [INF] Microsoft.Hosting.Lifetime Content root path: C:\Git\Ambev.DeveloperEvaluation\backend\src\Ambev.DeveloperEvaluation.WebApi
+2025-09-10 19:24:45.451 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 OPTIONS http://localhost:5119/api/users - null null
+2025-09-10 19:24:45.521 -03:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-09-10 19:24:45.523 -03:00 [INF] Ambev.DeveloperEvaluation.WebApi.Middleware.SerilogRequestLoggingMiddleware HTTP OPTIONS /api/users responded 204 in 46.6281 ms
+2025-09-10 19:24:45.531 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 OPTIONS http://localhost:5119/api/users - 204 null null 81.6315ms
+2025-09-10 19:24:45.541 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/users - application/json 358
+2025-09-10 19:24:45.546 -03:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-09-10 19:24:45.549 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 19:24:45.575 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "CreateUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(Ambev.DeveloperEvaluation.WebApi.Features.Users.CreateUser.CreateUserRequest, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-10 19:24:47.142 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi) in 1560.8363ms
+2025-09-10 19:24:47.146 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 19:24:47.189 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/users - 500 null text/plain; charset=utf-8 1648.2443ms
+2025-09-10 19:25:04.726 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 OPTIONS http://localhost:5119/api/users - null null
+2025-09-10 19:25:04.737 -03:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-09-10 19:25:04.739 -03:00 [INF] Ambev.DeveloperEvaluation.WebApi.Middleware.SerilogRequestLoggingMiddleware HTTP OPTIONS /api/users responded 204 in 6.4500 ms
+2025-09-10 19:25:04.741 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 OPTIONS http://localhost:5119/api/users - 204 null null 15.5984ms
+2025-09-10 19:25:04.744 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/users - application/json 358
+2025-09-10 19:25:04.747 -03:00 [INF] Microsoft.AspNetCore.Cors.Infrastructure.CorsService CORS policy execution successful.
+2025-09-10 19:25:04.749 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 19:25:04.751 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "CreateUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(Ambev.DeveloperEvaluation.WebApi.Features.Users.CreateUser.CreateUserRequest, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-10 19:25:04.797 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi) in 43.7465ms
+2025-09-10 19:25:04.801 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 19:25:04.810 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/users - 500 null text/plain; charset=utf-8 65.2449ms
+2025-09-10 19:25:14.715 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" setting number of workers to 0
+2025-09-10 19:25:14.724 -03:00 [INF] Rebus.ServiceProvider.Internals.RebusBackgroundService Bus instance RebusBus Rebus 1 successfully stopped
+2025-09-10 19:25:14.726 -03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-10 19:25:14.740 -03:00 [INF] Rebus.Threading.TaskParallelLibrary.TplAsyncTask Stopping periodic task "CleanupTrackedErrors"
+2025-09-10 19:25:14.746 -03:00 [INF] Rebus.Internals.ConnectionManager Disposing RabbitMQ connection
+2025-09-10 19:25:14.753 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" stopped

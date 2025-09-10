@@ -20,8 +20,8 @@
 cd backend
 # Restaurar pacotes
  dotnet restore
-# Gerar migrations e aplicar estrutura do banco
- dotnet ef database update
+# Gerar migrations e aplicar estrutura do banco. Dentro da pasta backend, executar o commando abaixo
+ dotnet ef database update --project src/Ambev.DeveloperEvaluation.ORM --startup-project src/Ambev.DeveloperEvaluation.WebApi
 # Rodar aplicação
  dotnet run --project src/Ambev.DeveloperEvaluation.WebApi
 ```
