@@ -20,9 +20,9 @@ export interface PaginatedResponse<T> {
 
 @Injectable({ providedIn: 'root' })
 export class CartService {
-  finalizeCart(id: string): Observable<any> {
-    // Pode ser necessário passar dados adicionais, ajuste conforme o backend
-    return this.http.post(`${this.apiUrl}/${id}/close`, {});
+  finalizeCart(id: string, branch: string): Observable<any> {
+    // Envia a filial no corpo da requisição
+    return this.http.post(`${this.apiUrl}/${id}/close`, { branch });
   }
   private apiUrl = 'http://localhost:5119/api/carts';
 

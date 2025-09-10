@@ -24,7 +24,35 @@
               <td>{{ cart.items?.length ?? 0 }}</td>
               <td class="text-end">
                 <a class="btn btn-warning btn-sm me-1" [routerLink]="['/carts/edit', cart.id]">Editar</a>
-                <button class="btn btn-success btn-sm me-1" (click)="finalizeCart(cart)">Finalizar</button>
+                <button class="btn btn-success btn-sm me-1" (click)="openFinalizeModal(cart)">Finalizar</button>
+<!-- Modal para finalizar carrinho -->
+<div class="modal fade" id="finalizeCartModal" tabindex="-1" aria-labelledby="finalizeCartModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="finalizeCartModalLabel">Finalizar Carrinho</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #finalizeForm="ngForm">
+          <div class="mb-3">
+            <label for="branch" class="form-label">Filial</label>
+            <input type="text" id="branch" class="form-control" [(ngModel)]="finalizeBranch" name="branch" required>
+          </div>
+        </form>
+        <div *ngIf="errors.length" class="alert alert-danger mt-2">
+          <ul class="mb-0">
+            <li *ngFor="let error of errors">{{ error }}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success" (click)="confirmFinalizeCart()">Finalizar</button>
+      </div>
+    </div>
+  </div>
+</div>
                 <button class="btn btn-danger btn-sm" (click)="confirmDelete(cart)">Excluir</button>
               </td>
             </tr>

@@ -60,6 +60,11 @@ export class CartCreateComponent implements OnInit {
     this.loading = true;
     this.error = null;
     if (!this.cart.products) this.cart.products = [];
+      // Ensure productName is set for each product item
+      this.cart.products.forEach(item => {
+        const prod = this.products.find(p => p.id === item.productId);
+        item.productName = prod ? prod.title : '';
+      });
     if (this.isEdit && this.cart.id) {
       this.cartService.updateCart(this.cart.id, this.cart as Cart).subscribe({
         next: () => {
@@ -80,6 +85,14 @@ export class CartCreateComponent implements OnInit {
           this.loading = false;
         }
       });
+    }
+  }
+  // Ensure productName is set when productId changes in the UI
+  onProductChange(index: number): void {
+    const item = this.cart.products?.[index];
+    if (item) {
+      const prod = this.products.find(p => p.id === item.productId);
+      item.productName = prod ? prod.title : '';
     }
   }
 }
