@@ -11,9 +11,16 @@ namespace Ambev.DeveloperEvaluation.IoC.ModuleInitializers
     {
         public void Initialize(WebApplicationBuilder builder)
         {
-
             builder.Services.AddControllers();
             builder.Services.AddHealthChecks();
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policy =>
+                    policy.AllowAnyOrigin()
+                          .AllowAnyHeader()
+                          .AllowAnyMethod());
+            });
         }
     }
 }

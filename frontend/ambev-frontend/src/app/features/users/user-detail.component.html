@@ -1,0 +1,19 @@
+<div class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-header bg-info text-white">
+          <h4 class="mb-0">Detalhes do Usuário</h4>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Nome: {{ user?.name?.firstname + ' ' + user?.name?.lastname }}</h5>
+          <p class="card-text">Email: {{ user?.email }}</p>
+          <p class="card-text">Telefone: {{ user?.phone }}</p>
+        </div>
+        <div class="card-footer d-flex justify-content-end bg-white">
+          <a [routerLink]="['/users']" class="btn btn-secondary">Voltar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

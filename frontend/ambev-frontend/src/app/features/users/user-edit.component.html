@@ -1,0 +1,89 @@
+<div class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-header bg-warning text-dark">
+          <h4 class="mb-0">Editar Usuário</h4>
+        </div>
+        <div class="card-body">
+          <form *ngIf="user" (ngSubmit)="onSubmit()">
+            <div *ngIf="errors.length" class="alert alert-danger">
+              <ul class="mb-0">
+                <li *ngFor="let error of errors">{{ error }}</li>
+              </ul>
+            </div>
+            <div class="mb-3">
+              <label for="username" class="form-label">Usuário</label>
+              <input type="text" class="form-control" id="username" [(ngModel)]="user.username" name="username" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="password" required>
+            </div>
+            <div class="mb-3">
+              <label for="firstname" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="firstname" [(ngModel)]="user.name.firstname" name="firstname" required>
+            </div>
+            <div class="mb-3">
+              <label for="lastname" class="form-label">Sobrenome</label>
+              <input type="text" class="form-control" id="lastname" [(ngModel)]="user.name.lastname" name="lastname" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" [(ngModel)]="user.email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Telefone</label>
+              <input type="text" class="form-control" id="phone" [(ngModel)]="user.phone" name="phone" required>
+            </div>
+            <div class="mb-3">
+              <label for="status" class="form-label">Status</label>
+              <select class="form-select" id="status" [(ngModel)]="user.status" name="status" required>
+                <option value="Active">Ativo</option>
+                <option value="Inactive">Inativo</option>
+                <option value="Suspended">Suspenso</option>
+                <option value="Unknown">Desconhecido</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="role" class="form-label">Perfil</label>
+              <select class="form-select" id="role" [(ngModel)]="user.role" name="role" required>
+                <option value="Customer">Cliente</option>
+                <option value="Manager">Gerente</option>
+                <option value="Admin">Admin</option>
+                <option value="None">Nenhum</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="city" class="form-label">Cidade</label>
+              <input type="text" class="form-control" id="city" [(ngModel)]="user.address.city" name="city" required>
+            </div>
+            <div class="mb-3">
+              <label for="street" class="form-label">Rua</label>
+              <input type="text" class="form-control" id="street" [(ngModel)]="user.address.street" name="street" required>
+            </div>
+            <div class="mb-3">
+              <label for="number" class="form-label">Número</label>
+              <input type="number" class="form-control" id="number" [(ngModel)]="user.address.number" name="number" required>
+            </div>
+            <div class="mb-3">
+              <label for="zipcode" class="form-label">CEP</label>
+              <input type="text" class="form-control" id="zipcode" [(ngModel)]="user.address.zipcode" name="zipcode" required>
+            </div>
+            <div class="mb-3">
+              <label for="lat" class="form-label">Latitude</label>
+              <input type="text" class="form-control" id="lat" [(ngModel)]="user.address.geolocation.lat" name="lat" required>
+            </div>
+            <div class="mb-3">
+              <label for="long" class="form-label">Longitude</label>
+              <input type="text" class="form-control" id="long" [(ngModel)]="user.address.geolocation.long" name="long" required>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button type="submit" class="btn btn-warning">Salvar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -40,6 +40,8 @@ public class Program
             app.UseAuthentication();
             app.UseAuthorization();
 
+            app.UseCors();
+
             app.UseBasicHealthChecks();
 
             app.MapControllers();
