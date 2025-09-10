@@ -6,6 +6,7 @@
   - .NET 8 SDK
   - Node.js 20+
   - Docker e Docker Compose
+  - Postgresql (pode ser via Docker)
   - MongoDB (pode ser via Docker)
   - RabbitMQ (pode ser via Docker)
 
@@ -35,7 +36,7 @@ npm start
 ### Docker Compose
 ```sh
 cd backend
-# Sobe MongoDB, RabbitMQ e WebApi
+# Sobe MongoDB, RabbitMQ, PostgreSql e WebApi
  docker-compose up -d
 # Para e remove volumes
  docker-compose down -v
@@ -80,7 +81,7 @@ cd backend
 
 ## Testes e Validação
 - **Swagger:** Disponível em `/swagger` para testar endpoints da API.
-- **Postman:** Coleção disponível para importação e testes manuais.
+- **Postman:** Coleção disponível para importação e testes manuais (Ambev.DeveloperEvaluation.postman_collection.json).
 - **Angular:** Interface completa para testes de fluxo e validação visual.
 
 ## Executando Testes
