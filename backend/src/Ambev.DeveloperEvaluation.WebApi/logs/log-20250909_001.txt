@@ -1,0 +1,24 @@
+2025-09-09 21:28:30.906 -03:00 [INF] Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService Health Check enabled at: '/health'
+2025-09-09 21:28:31.223 -03:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using 'C:\Users\dnumajiri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-09 21:28:31.329 -03:00 [INF] Rebus.Internals.ConnectionManager Initializing RabbitMQ connection manager for transport with input queue "queue-sale"
+2025-09-09 21:28:31.740 -03:00 [INF] Rebus.Threading.TaskParallelLibrary.TplAsyncTask Starting periodic task "CleanupTrackedErrors" with interval 00:00:10
+2025-09-09 21:28:31.764 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" started
+2025-09-09 21:28:31.770 -03:00 [INF] Rebus.ServiceProvider.Internals.RebusBackgroundService Successfully created bus instance RebusBus Rebus 1 (isDefaultBus: true)
+2025-09-09 21:28:31.918 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" setting number of workers to 1
+2025-09-09 21:28:31.994 -03:00 [INF] Rebus.RabbitMq.RabbitMqTransport Successfully initialized consumer for "queue-sale"
+2025-09-09 21:28:32.017 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" setting number of workers to 0
+2025-09-09 21:28:32.037 -03:00 [INF] Rebus.Threading.TaskParallelLibrary.TplAsyncTask Stopping periodic task "CleanupTrackedErrors"
+2025-09-09 21:28:32.078 -03:00 [INF] Rebus.Internals.ConnectionManager Disposing RabbitMQ connection
+2025-09-09 21:28:32.128 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" stopped
+2025-09-09 21:30:18.493 -03:00 [INF] Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService Health Check enabled at: '/health'
+2025-09-09 21:30:18.646 -03:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using 'C:\Users\dnumajiri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-09 21:30:18.731 -03:00 [INF] Rebus.Internals.ConnectionManager Initializing RabbitMQ connection manager for transport with input queue "queue-sale"
+2025-09-09 21:30:19.105 -03:00 [INF] Rebus.Threading.TaskParallelLibrary.TplAsyncTask Starting periodic task "CleanupTrackedErrors" with interval 00:00:10
+2025-09-09 21:30:19.178 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" started
+2025-09-09 21:30:19.183 -03:00 [INF] Rebus.ServiceProvider.Internals.RebusBackgroundService Successfully created bus instance RebusBus Rebus 1 (isDefaultBus: true)
+2025-09-09 21:30:19.234 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" setting number of workers to 1
+2025-09-09 21:30:19.291 -03:00 [INF] Rebus.RabbitMq.RabbitMqTransport Successfully initialized consumer for "queue-sale"
+2025-09-09 21:30:19.325 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" setting number of workers to 0
+2025-09-09 21:30:19.443 -03:00 [INF] Rebus.Threading.TaskParallelLibrary.TplAsyncTask Stopping periodic task "CleanupTrackedErrors"
+2025-09-09 21:30:19.459 -03:00 [INF] Rebus.Internals.ConnectionManager Disposing RabbitMQ connection
+2025-09-09 21:30:19.485 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" stopped

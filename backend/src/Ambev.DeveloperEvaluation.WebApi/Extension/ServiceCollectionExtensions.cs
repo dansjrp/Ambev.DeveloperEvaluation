@@ -19,6 +19,15 @@ namespace Ambev.DeveloperEvaluation.WebApi
     {
         public static WebApplicationBuilder AddApplicationServices(this WebApplicationBuilder builder)
         {
+            builder.Services.AddSingleton<EventAuditMongoRepository>(sp => {
+                var config = sp.GetRequiredService<IConfiguration>();
+                var mongoSection = config.GetSection("MongoDb");
+                var mongoConn = mongoSection["ConnectionString"];
+                var mongoDb = mongoSection["Database"];
+                var mongoColl = "event_audit";
+                return new EventAuditMongoRepository(mongoConn, mongoDb, mongoColl);
+            });
+            
             builder.AddDefaultLogging();
 
             builder.Services.AddControllers()
