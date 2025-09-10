@@ -47,4 +47,22 @@ export class CartListComponent implements OnInit {
       }
     }
   }
+
+  finalizeCart(cart: Cart): void {
+    if (!cart.id) {
+      alert('ID do carrinho não encontrado.');
+      return;
+    }
+    if (confirm(`Deseja finalizar o carrinho ${cart.id}?`)) {
+      this.cartService.finalizeCart(cart.id).subscribe({
+        next: result => {
+          alert('Foi gerado uma venda, anote o numero: ' + result.number);
+          this.loadCarts(this.currentPage);
+        },
+        error: err => {
+          alert('Erro ao finalizar carrinho: ' + (err?.error?.message || 'Erro desconhecido'));
+        }
+      });
+    }
+  }
 }

@@ -30,7 +30,11 @@ public class CartRepository : ICartRepository
 
     public async Task<(IEnumerable<Cart> Carts, int TotalCount)> GetPaginatedAsync(int page, int pageSize, string? orderBy)
     {
-        var query = _context.Carts.AsQueryable();
+        var query = _context.Carts
+                    .Include(c => c.User)
+                    .Include(c => c.Products)
+                        .ThenInclude(i => i.Product)
+                    .AsQueryable();
         // Ordenação dinâmica (exemplo: "UserId asc,Date desc")
         if (!string.IsNullOrEmpty(orderBy))
         {

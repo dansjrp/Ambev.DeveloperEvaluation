@@ -5,7 +5,9 @@ import { Observable } from 'rxjs';
 export interface Cart {
   id?: string;
   userId: string;
-  products: Array<{ productId: string; quantity: number }>;
+  userName?: string;
+  products: Array<{ productId: string; productName: string; quantity: number }>;
+  items?: Array<{ productId: string; productName: string; quantity: number }>;
   createdAt?: string;
 }
 
@@ -18,6 +20,10 @@ export interface PaginatedResponse<T> {
 
 @Injectable({ providedIn: 'root' })
 export class CartService {
+  finalizeCart(id: string): Observable<any> {
+    // Pode ser necessário passar dados adicionais, ajuste conforme o backend
+    return this.http.post(`${this.apiUrl}/${id}/close`, {});
+  }
   private apiUrl = 'http://localhost:5119/api/carts';
 
   constructor(private http: HttpClient) {}

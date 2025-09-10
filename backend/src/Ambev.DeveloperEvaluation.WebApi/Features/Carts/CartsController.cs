@@ -139,7 +139,8 @@ public class CartsController : BaseController
             {
                 Id = c.Id,
                 UserId = c.UserId,
-                Items = c.Products.ConvertAll(i => new CartItemResponse { ProductId = i.ProductId, Quantity = i.Quantity })
+                UserName = c.User?.Username ?? "",
+                Items = c.Products.ConvertAll(i => new CartItemResponse { ProductId = i.ProductId, ProductName = i.Product?.Title ?? "", Quantity = i.Quantity })
             });
         }
         return Ok(response);

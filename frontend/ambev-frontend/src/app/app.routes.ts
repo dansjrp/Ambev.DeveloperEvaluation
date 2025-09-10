@@ -14,5 +14,9 @@ export const routes: Routes = [
 	{ path: 'carts', loadComponent: () => import('./features/carts/cart-list.component').then(m => m.CartListComponent) },
 	{ path: 'carts/create', loadComponent: () => import('./features/carts/cart-create.component').then(m => m.CartCreateComponent) },
 	{ path: 'carts/edit/:id', loadComponent: () => import('./features/carts/cart-create.component').then(m => m.CartCreateComponent) },
+	{ path: 'sales', loadComponent: () => import('./features/sales/sale-list.component').then(m => m.SaleListComponent) },
+	{ path: 'sales/create', loadComponent: () => import('./features/sales/sale-create.component').then(m => m.SaleCreateComponent) },
+	{ path: 'sales/edit/:id', loadComponent: () => import('./features/sales/sale-create.component').then(m => m.SaleCreateComponent) },
+	{ path: 'sales/:id', loadComponent: () => import('./features/sales/sale-detail.component').then(m => m.SaleDetailComponent) },
 	{ path: '', redirectTo: 'users', pathMatch: 'full' }
 ];

@@ -26,6 +26,19 @@ namespace Ambev.DeveloperEvaluation.WebApi.Features.Sales
             _mediator = mediator;
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetSalesPaginated([FromQuery] int page = 1, [FromQuery] int pageSize = 10, [FromQuery] string? order = null)
+        {
+            var (sales, totalCount) = await _mediator.Send(new Application.Sales.GetSale.GetSalesPaginatedCommand { Page = page, PageSize = pageSize, OrderBy = order });
+            var response = new {
+                Data = sales,
+                CurrentPage = page,
+                TotalCount = totalCount,
+                TotalPages = (int)Math.Ceiling((double)totalCount / pageSize)
+            };
+            return Ok(response);
+        }
+
         [HttpGet("{number}")]
         public async Task<IActionResult> GetByNumber(int number)
         {
