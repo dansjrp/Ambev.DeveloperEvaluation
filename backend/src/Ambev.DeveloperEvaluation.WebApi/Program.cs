@@ -18,7 +18,7 @@ namespace Ambev.DeveloperEvaluation.WebApi;
 
 public class Program
 {
-    public static void Main(string[] args)
+    public static async Task Main(string[] args)
     {
         try
         {
@@ -44,7 +44,7 @@ public class Program
 
             app.MapControllers();
 
-            app.Run();
+            await app.RunAsync();
         }
         catch (Exception ex)
         {

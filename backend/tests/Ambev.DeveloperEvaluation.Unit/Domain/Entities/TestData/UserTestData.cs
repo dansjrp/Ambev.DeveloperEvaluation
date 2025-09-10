@@ -37,7 +37,29 @@ public static class UserTestData
     /// <returns>A valid User entity with randomly generated data.</returns>
     public static User GenerateValidUser()
     {
-        return UserFaker.Generate();
+        var faker = new Faker();
+        return new User
+        {
+            Username = faker.Internet.UserName(),
+            Password = $"Test@{faker.Random.Number(100, 999)}",
+            Email = faker.Internet.Email(),
+            Phone = faker.Phone.PhoneNumber("(##) #####-####"),
+            Status = faker.PickRandom(UserStatus.Active, UserStatus.Suspended),
+            Role = faker.PickRandom(UserRole.Customer, UserRole.Admin),
+            Name = new Name(faker.Name.FirstName(), faker.Name.LastName()),
+            Address = new Address
+            {
+                City = faker.Address.City(),
+                Street = faker.Address.StreetName(),
+                Number = faker.Random.Int(1, 9999),
+                Zipcode = faker.Address.ZipCode("#####-###"),
+                Geolocation = new Geolocation
+                {
+                    Lat = faker.Address.Latitude().ToString(),
+                    Long = faker.Address.Longitude().ToString()
+                }
+            }
+        };
     }
 
     /// <summary>

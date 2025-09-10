@@ -1,0 +1,283 @@
+2025-09-10 00:01:17.963 -03:00 [INF] Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService Health Check enabled at: '/health'
+2025-09-10 00:01:18.267 -03:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using 'C:\Users\dnumajiri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-10 00:01:18.503 -03:00 [INF] Rebus.Internals.ConnectionManager Initializing RabbitMQ connection manager for transport with input queue "queue-sale"
+2025-09-10 00:01:19.792 -03:00 [INF] Rebus.Threading.TaskParallelLibrary.TplAsyncTask Starting periodic task "CleanupTrackedErrors" with interval 00:00:10
+2025-09-10 00:01:20.491 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" started
+2025-09-10 00:01:20.499 -03:00 [INF] Rebus.ServiceProvider.Internals.RebusBackgroundService Successfully created bus instance RebusBus Rebus 1 (isDefaultBus: true)
+2025-09-10 00:01:20.643 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" setting number of workers to 1
+2025-09-10 00:01:20.711 -03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5119
+2025-09-10 00:01:20.712 -03:00 [INF] Rebus.RabbitMq.RabbitMqTransport Successfully initialized consumer for "queue-sale"
+2025-09-10 00:01:20.715 -03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-10 00:01:20.721 -03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-10 00:01:20.724 -03:00 [INF] Microsoft.Hosting.Lifetime Content root path: C:\Git\Ambev.DeveloperEvaluation\backend\src\Ambev.DeveloperEvaluation.WebApi
+2025-09-10 00:01:32.286 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/api/carts/e5700eb5-4dc0-4190-8285-78dcccbb1a97 - null null
+2025-09-10 00:01:32.381 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController.GetCartById (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:01:32.416 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetCartById", controller = "Carts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCartById(System.Guid) on controller Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-10 00:01:34.167 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController.GetCartById (Ambev.DeveloperEvaluation.WebApi) in 1742.6571ms
+2025-09-10 00:01:34.172 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController.GetCartById (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:01:34.218 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/api/carts/e5700eb5-4dc0-4190-8285-78dcccbb1a97 - 500 null text/plain; charset=utf-8 1933.1197ms
+2025-09-10 00:02:37.256 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" setting number of workers to 0
+2025-09-10 00:02:37.263 -03:00 [INF] Rebus.ServiceProvider.Internals.RebusBackgroundService Bus instance RebusBus Rebus 1 successfully stopped
+2025-09-10 00:02:37.264 -03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-10 00:02:37.276 -03:00 [INF] Rebus.Threading.TaskParallelLibrary.TplAsyncTask Stopping periodic task "CleanupTrackedErrors"
+2025-09-10 00:02:37.285 -03:00 [INF] Rebus.Internals.ConnectionManager Disposing RabbitMQ connection
+2025-09-10 00:02:37.300 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" stopped
+2025-09-10 00:03:09.426 -03:00 [INF] Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService Health Check enabled at: '/health'
+2025-09-10 00:03:09.671 -03:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using 'C:\Users\dnumajiri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-10 00:03:09.791 -03:00 [INF] Rebus.Internals.ConnectionManager Initializing RabbitMQ connection manager for transport with input queue "queue-sale"
+2025-09-10 00:03:10.252 -03:00 [INF] Rebus.Threading.TaskParallelLibrary.TplAsyncTask Starting periodic task "CleanupTrackedErrors" with interval 00:00:10
+2025-09-10 00:03:10.272 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" started
+2025-09-10 00:03:10.278 -03:00 [INF] Rebus.ServiceProvider.Internals.RebusBackgroundService Successfully created bus instance RebusBus Rebus 1 (isDefaultBus: true)
+2025-09-10 00:03:10.372 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" setting number of workers to 1
+2025-09-10 00:03:10.373 -03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5119
+2025-09-10 00:03:10.376 -03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-10 00:03:10.378 -03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-10 00:03:10.380 -03:00 [INF] Microsoft.Hosting.Lifetime Content root path: C:\Git\Ambev.DeveloperEvaluation\backend\src\Ambev.DeveloperEvaluation.WebApi
+2025-09-10 00:03:10.426 -03:00 [INF] Rebus.RabbitMq.RabbitMqTransport Successfully initialized consumer for "queue-sale"
+2025-09-10 00:03:35.764 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/api/carts/e5700eb5-4dc0-4190-8285-78dcccbb1a97 - null null
+2025-09-10 00:03:35.815 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController.GetCartById (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:03:35.836 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetCartById", controller = "Carts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCartById(System.Guid) on controller Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-10 00:03:36.965 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (47ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."Date", t."UserId", c0."CartId", c0."Id", c0."ProductId", c0."Quantity"
+FROM (
+    SELECT c."Id", c."Date", c."UserId"
+    FROM "Carts" AS c
+    WHERE c."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "CartProduct" AS c0 ON t."Id" = c0."CartId"
+ORDER BY t."Id", c0."CartId"
+2025-09-10 00:03:36.996 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing NotFoundObjectResult, writing value of type 'Ambev.DeveloperEvaluation.WebApi.Common.ApiErrorResponse'.
+2025-09-10 00:03:37.034 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController.GetCartById (Ambev.DeveloperEvaluation.WebApi) in 1189.4956ms
+2025-09-10 00:03:37.043 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController.GetCartById (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:03:37.048 -03:00 [INF] Ambev.DeveloperEvaluation.WebApi.Middleware.SerilogRequestLoggingMiddleware HTTP GET /api/carts/e5700eb5-4dc0-4190-8285-78dcccbb1a97 responded 404 in 1263.8469 ms
+2025-09-10 00:03:37.067 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/api/carts/e5700eb5-4dc0-4190-8285-78dcccbb1a97 - 404 null application/json; charset=utf-8 1301.2312ms
+2025-09-10 00:03:46.819 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/products - application/json 174
+2025-09-10 00:03:46.827 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Products.ProductsController.CreateProduct (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:03:46.833 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Ambev.DeveloperEvaluation.WebApi.Features.Products.CreateProduct.CreateProductRequest) on controller Ambev.DeveloperEvaluation.WebApi.Features.Products.ProductsController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-10 00:03:47.183 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (17ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?', @p4='?' (DbType = Decimal), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("Id", "Category", "Description", "Image", "Price", "Title", "Rating_Count", "Rating_Rate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-09-10 00:03:47.194 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing CreatedResult, writing value of type 'Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Features.Products.CreateProduct.CreateProductResponse, Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-10 00:03:47.213 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Products.ProductsController.CreateProduct (Ambev.DeveloperEvaluation.WebApi) in 378.4059ms
+2025-09-10 00:03:47.215 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Products.ProductsController.CreateProduct (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:03:47.217 -03:00 [INF] Ambev.DeveloperEvaluation.WebApi.Middleware.SerilogRequestLoggingMiddleware HTTP POST /api/products responded 201 in 390.5394 ms
+2025-09-10 00:03:47.219 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/products - 201 null application/json; charset=utf-8 399.9933ms
+2025-09-10 00:04:11.211 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/products - application/json 174
+2025-09-10 00:04:11.216 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Products.ProductsController.CreateProduct (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:04:11.217 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Ambev.DeveloperEvaluation.WebApi.Features.Products.CreateProduct.CreateProductRequest) on controller Ambev.DeveloperEvaluation.WebApi.Features.Products.ProductsController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-10 00:04:11.291 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?', @p4='?' (DbType = Decimal), @p5='?', @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("Id", "Category", "Description", "Image", "Price", "Title", "Rating_Count", "Rating_Rate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-09-10 00:04:11.294 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing CreatedResult, writing value of type 'Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Features.Products.CreateProduct.CreateProductResponse, Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-10 00:04:11.295 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Products.ProductsController.CreateProduct (Ambev.DeveloperEvaluation.WebApi) in 76.1639ms
+2025-09-10 00:04:11.297 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Products.ProductsController.CreateProduct (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:04:11.299 -03:00 [INF] Ambev.DeveloperEvaluation.WebApi.Middleware.SerilogRequestLoggingMiddleware HTTP POST /api/products responded 201 in 85.5597 ms
+2025-09-10 00:04:11.302 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/products - 201 null application/json; charset=utf-8 91.4576ms
+2025-09-10 00:04:28.897 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/Users - application/json 388
+2025-09-10 00:04:28.901 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:04:28.906 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "CreateUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(Ambev.DeveloperEvaluation.WebApi.Features.Users.CreateUser.CreateUserRequest, System.Threading.CancellationToken) on controller Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-10 00:04:28.993 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (3ms) [Parameters=[@__email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Password", u."Phone", u."Role", u."Status", u."UpdatedAt", u."Username", u."Address_City", u."Address_Number", u."Address_Street", u."Address_Zipcode", u."Address_Geolocation_Lat", u."Address_Geolocation_Long", u."Name_Firstname", u."Name_Lastname"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 1
+2025-09-10 00:04:29.448 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?', @p4='?', @p5='?', @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?' (DbType = Int32), @p10='?', @p11='?', @p12='?', @p13='?', @p14='?', @p15='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("CreatedAt", "Email", "Password", "Phone", "Role", "Status", "UpdatedAt", "Username", "Address_City", "Address_Number", "Address_Street", "Address_Zipcode", "Address_Geolocation_Lat", "Address_Geolocation_Long", "Name_Firstname", "Name_Lastname")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15)
+RETURNING "Id";
+2025-09-10 00:04:29.466 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing CreatedResult, writing value of type 'Ambev.DeveloperEvaluation.WebApi.Common.ApiResponseWithData`1[[Ambev.DeveloperEvaluation.WebApi.Features.Users.CreateUser.CreateUserResponse, Ambev.DeveloperEvaluation.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-10 00:04:29.474 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi) in 566.2415ms
+2025-09-10 00:04:29.477 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Users.UsersController.CreateUser (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:04:29.480 -03:00 [INF] Ambev.DeveloperEvaluation.WebApi.Middleware.SerilogRequestLoggingMiddleware HTTP POST /api/Users responded 201 in 579.4569 ms
+2025-09-10 00:04:29.483 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/Users - 201 null application/json; charset=utf-8 586.7388ms
+2025-09-10 00:04:46.360 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/carts - application/json 235
+2025-09-10 00:04:46.363 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController.CreateCart (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:04:46.367 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "CreateCart", controller = "Carts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateCart(Ambev.DeveloperEvaluation.WebApi.Features.Carts.CreateCart.CreateCartRequest) on controller Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-10 00:04:46.420 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Password", u."Phone", u."Role", u."Status", u."UpdatedAt", u."Username", u."Address_City", u."Address_Number", u."Address_Street", u."Address_Zipcode", u."Address_Geolocation_Lat", u."Address_Geolocation_Long", u."Name_Firstname", u."Name_Lastname"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-09-10 00:04:46.462 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."Description", p."Image", p."Price", p."Title", p."Rating_Count", p."Rating_Rate"
+FROM "Products" AS p
+WHERE p."Id" = @__get_Item_0
+LIMIT 1
+2025-09-10 00:04:46.472 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."Description", p."Image", p."Price", p."Title", p."Rating_Count", p."Rating_Rate"
+FROM "Products" AS p
+WHERE p."Id" = @__get_Item_0
+LIMIT 1
+2025-09-10 00:04:46.534 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Guid), @p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (DbType = Int32), @p6='?' (DbType = Guid), @p7='?' (DbType = Guid), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Carts" ("Id", "Date", "UserId")
+VALUES (@p0, @p1, @p2);
+INSERT INTO "CartProduct" ("CartId", "ProductId", "Quantity")
+VALUES (@p3, @p4, @p5)
+RETURNING "Id";
+INSERT INTO "CartProduct" ("CartId", "ProductId", "Quantity")
+VALUES (@p6, @p7, @p8)
+RETURNING "Id";
+2025-09-10 00:04:46.562 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing CreatedAtActionResult, writing value of type 'Ambev.DeveloperEvaluation.Domain.Entities.Cart'.
+2025-09-10 00:04:46.601 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController.CreateCart (Ambev.DeveloperEvaluation.WebApi) in 231.5429ms
+2025-09-10 00:04:46.605 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController.CreateCart (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:04:46.607 -03:00 [INF] Ambev.DeveloperEvaluation.WebApi.Middleware.SerilogRequestLoggingMiddleware HTTP POST /api/carts responded 201 in 243.8337 ms
+2025-09-10 00:04:46.609 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/carts - 201 null application/json; charset=utf-8 249.0761ms
+2025-09-10 00:05:04.303 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/api/carts/97b1f5f0-17c8-4578-a132-4e7a351128e0 - null null
+2025-09-10 00:05:04.306 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController.GetCartById (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:05:04.307 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetCartById", controller = "Carts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCartById(System.Guid) on controller Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-10 00:05:04.313 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."Date", t."UserId", c0."CartId", c0."Id", c0."ProductId", c0."Quantity"
+FROM (
+    SELECT c."Id", c."Date", c."UserId"
+    FROM "Carts" AS c
+    WHERE c."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "CartProduct" AS c0 ON t."Id" = c0."CartId"
+ORDER BY t."Id", c0."CartId"
+2025-09-10 00:05:04.326 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type 'Ambev.DeveloperEvaluation.Domain.Entities.Cart'.
+2025-09-10 00:05:04.328 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController.GetCartById (Ambev.DeveloperEvaluation.WebApi) in 19.0634ms
+2025-09-10 00:05:04.330 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController.GetCartById (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:05:04.332 -03:00 [INF] Ambev.DeveloperEvaluation.WebApi.Middleware.SerilogRequestLoggingMiddleware HTTP GET /api/carts/97b1f5f0-17c8-4578-a132-4e7a351128e0 responded 200 in 26.7787 ms
+2025-09-10 00:05:04.335 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/api/carts/97b1f5f0-17c8-4578-a132-4e7a351128e0 - 200 null application/json; charset=utf-8 32.0977ms
+2025-09-10 00:05:16.240 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/carts/97b1f5f0-17c8-4578-a132-4e7a351128e0 - application/json 33
+2025-09-10 00:05:16.243 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint '405 HTTP Method Not Supported'
+2025-09-10 00:05:16.244 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint '405 HTTP Method Not Supported'
+2025-09-10 00:05:16.246 -03:00 [INF] Ambev.DeveloperEvaluation.WebApi.Middleware.SerilogRequestLoggingMiddleware HTTP POST /api/carts/97b1f5f0-17c8-4578-a132-4e7a351128e0 responded 405 in 3.0979 ms
+2025-09-10 00:05:16.248 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/carts/97b1f5f0-17c8-4578-a132-4e7a351128e0 - 405 0 null 7.6322ms
+2025-09-10 00:05:29.808 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 POST http://localhost:5119/api/carts/97b1f5f0-17c8-4578-a132-4e7a351128e0/close - application/json 33
+2025-09-10 00:05:29.820 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController.CloseCart (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:05:29.829 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "CloseCart", controller = "Carts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CloseCart(System.Guid, Ambev.DeveloperEvaluation.WebApi.Features.Carts.CloseCart.CloseCartRequest, MediatR.IMediator) on controller Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-10 00:05:29.876 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."Date", t."UserId", t0."CartId", t0."Id", t0."ProductId", t0."Quantity", t0."Id0", t0."Category", t0."Description", t0."Image", t0."Price", t0."Title", t0."Rating_Count", t0."Rating_Rate"
+FROM (
+    SELECT c."Id", c."Date", c."UserId"
+    FROM "Carts" AS c
+    WHERE c."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT c0."CartId", c0."Id", c0."ProductId", c0."Quantity", p."Id" AS "Id0", p."Category", p."Description", p."Image", p."Price", p."Title", p."Rating_Count", p."Rating_Rate"
+    FROM "CartProduct" AS c0
+    LEFT JOIN "Products" AS p ON c0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."CartId"
+ORDER BY t."Id", t0."CartId", t0."Id"
+2025-09-10 00:05:29.935 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = DateTime), @p3='?' (DbType = Decimal), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (DbType = Boolean), @p7='?' (DbType = Decimal), @p8='?' (DbType = Decimal), @p9='?' (DbType = Guid), @p10='?' (DbType = Int32), @p11='?' (DbType = Guid), @p12='?' (DbType = Decimal), @p13='?' (DbType = Guid), @p14='?' (DbType = Boolean), @p15='?' (DbType = Decimal), @p16='?' (DbType = Decimal), @p17='?' (DbType = Guid), @p18='?' (DbType = Int32), @p19='?' (DbType = Guid), @p20='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Sales" ("Id", "Branch", "Date", "Total", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Number";
+INSERT INTO "SaleItems" ("Id", "Cancelled", "Discounts", "Price", "ProductId", "Quantity", "SaleId", "TotalPrice")
+VALUES (@p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+INSERT INTO "SaleItems" ("Id", "Cancelled", "Discounts", "Price", "ProductId", "Quantity", "SaleId", "TotalPrice")
+VALUES (@p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2025-09-10 00:05:30.012 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type 'Ambev.DeveloperEvaluation.WebApi.Features.Carts.CloseCart.CloseCartResponse'.
+2025-09-10 00:05:30.018 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController.CloseCart (Ambev.DeveloperEvaluation.WebApi) in 186.6818ms
+2025-09-10 00:05:30.020 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Carts.CartsController.CloseCart (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:05:30.022 -03:00 [INF] Ambev.DeveloperEvaluation.WebApi.Middleware.SerilogRequestLoggingMiddleware HTTP POST /api/carts/97b1f5f0-17c8-4578-a132-4e7a351128e0/close responded 200 in 202.2753 ms
+2025-09-10 00:05:30.024 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 POST http://localhost:5119/api/carts/97b1f5f0-17c8-4578-a132-4e7a351128e0/close - 200 null application/json; charset=utf-8 216.4498ms
+2025-09-10 00:05:30.293 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="1b585390-a17b-4af0-9546-de7ace83e82e", CreatedAt="2025-09-10T03:05:29.8840409Z"
+2025-09-10 00:05:48.986 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/api/sales/1 - null null
+2025-09-10 00:05:48.990 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Sales.SalesController.GetByNumber (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:05:48.995 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetByNumber", controller = "Sales"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByNumber(Int32) on controller Ambev.DeveloperEvaluation.WebApi.Features.Sales.SalesController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-10 00:05:49.021 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (2ms) [Parameters=[@__number_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."Branch", t."Date", t."Number", t."Total", t."UserId", s0."Id", s0."Cancelled", s0."Discounts", s0."Price", s0."ProductId", s0."Quantity", s0."SaleId", s0."TotalPrice"
+FROM (
+    SELECT s."Id", s."Branch", s."Date", s."Number", s."Total", s."UserId"
+    FROM "Sales" AS s
+    WHERE s."Number" = @__number_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SaleItems" AS s0 ON t."Id" = s0."SaleId"
+ORDER BY t."Id"
+2025-09-10 00:05:49.027 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type 'Ambev.DeveloperEvaluation.Application.Sales.GetSale.GetSaleByIdResult'.
+2025-09-10 00:05:49.031 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Sales.SalesController.GetByNumber (Ambev.DeveloperEvaluation.WebApi) in 33.1521ms
+2025-09-10 00:05:49.032 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Sales.SalesController.GetByNumber (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:05:49.033 -03:00 [INF] Ambev.DeveloperEvaluation.WebApi.Middleware.SerilogRequestLoggingMiddleware HTTP GET /api/sales/1 responded 200 in 43.1140 ms
+2025-09-10 00:05:49.035 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/api/sales/1 - 200 null application/json; charset=utf-8 48.1281ms
+2025-09-10 00:06:00.385 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="1b585390-a17b-4af0-9546-de7ace83e82e", CreatedAt="2025-09-10T03:05:29.8840409Z"
+2025-09-10 00:06:29.927 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 PUT http://localhost:5119/api/sales/1b585390-a17b-4af0-9546-de7ace83e82e/item/e7a0a532-e79e-4fd4-9e04-45b5ee8ab97b - application/json 48
+2025-09-10 00:06:29.930 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Sales.SalesController.UpdateSaleItem (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:06:29.934 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "UpdateSaleItem", controller = "Sales"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateSaleItem(System.Guid, System.Guid, Ambev.DeveloperEvaluation.WebApi.Features.Sales.UpdateSale.UpdateSaleItemRequest) on controller Ambev.DeveloperEvaluation.WebApi.Features.Sales.SalesController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-10 00:06:29.966 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (2ms) [Parameters=[@__saleId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."Branch", t."Date", t."Number", t."Total", t."UserId", s0."Id", s0."Cancelled", s0."Discounts", s0."Price", s0."ProductId", s0."Quantity", s0."SaleId", s0."TotalPrice"
+FROM (
+    SELECT s."Id", s."Branch", s."Date", s."Number", s."Total", s."UserId"
+    FROM "Sales" AS s
+    WHERE s."Id" = @__saleId_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SaleItems" AS s0 ON t."Id" = s0."SaleId"
+ORDER BY t."Id"
+2025-09-10 00:06:29.977 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (3ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = Int32), @p7='?' (DbType = Guid), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = Decimal), @p6='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SaleItems" SET "Quantity" = @p0
+WHERE "Id" = @p1;
+UPDATE "Sales" SET "Branch" = @p2, "Date" = @p3, "Number" = @p4, "Total" = @p5, "UserId" = @p6
+WHERE "Id" = @p7;
+2025-09-10 00:06:29.992 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleUpdatedEventHandler SaleUpdatedEvent recebido: SaleId="1b585390-a17b-4af0-9546-de7ace83e82e", UpdatedAt="2025-09-10T03:06:29.9861521Z"
+2025-09-10 00:06:29.996 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-10 00:06:29.999 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Sales.SalesController.UpdateSaleItem (Ambev.DeveloperEvaluation.WebApi) in 63.3909ms
+2025-09-10 00:06:30.001 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Sales.SalesController.UpdateSaleItem (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:06:30.002 -03:00 [INF] Ambev.DeveloperEvaluation.WebApi.Middleware.SerilogRequestLoggingMiddleware HTTP PUT /api/sales/1b585390-a17b-4af0-9546-de7ace83e82e/item/e7a0a532-e79e-4fd4-9e04-45b5ee8ab97b responded 200 in 71.8658 ms
+2025-09-10 00:06:30.004 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 PUT http://localhost:5119/api/sales/1b585390-a17b-4af0-9546-de7ace83e82e/item/e7a0a532-e79e-4fd4-9e04-45b5ee8ab97b - 200 null application/json; charset=utf-8 76.8963ms
+2025-09-10 00:06:30.405 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="1b585390-a17b-4af0-9546-de7ace83e82e", CreatedAt="2025-09-10T03:05:29.8840409Z"
+2025-09-10 00:06:40.594 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5119/api/sales/1 - null null
+2025-09-10 00:06:40.597 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Sales.SalesController.GetByNumber (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:06:40.598 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetByNumber", controller = "Sales"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByNumber(Int32) on controller Ambev.DeveloperEvaluation.WebApi.Features.Sales.SalesController (Ambev.DeveloperEvaluation.WebApi).
+2025-09-10 00:06:40.606 -03:00 [INF] Microsoft.EntityFrameworkCore.Database.Command Executed DbCommand (2ms) [Parameters=[@__number_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."Branch", t."Date", t."Number", t."Total", t."UserId", s0."Id", s0."Cancelled", s0."Discounts", s0."Price", s0."ProductId", s0."Quantity", s0."SaleId", s0."TotalPrice"
+FROM (
+    SELECT s."Id", s."Branch", s."Date", s."Number", s."Total", s."UserId"
+    FROM "Sales" AS s
+    WHERE s."Number" = @__number_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SaleItems" AS s0 ON t."Id" = s0."SaleId"
+ORDER BY t."Id"
+2025-09-10 00:06:40.609 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor Executing OkObjectResult, writing value of type 'Ambev.DeveloperEvaluation.Application.Sales.GetSale.GetSaleByIdResult'.
+2025-09-10 00:06:40.610 -03:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action Ambev.DeveloperEvaluation.WebApi.Features.Sales.SalesController.GetByNumber (Ambev.DeveloperEvaluation.WebApi) in 10.1183ms
+2025-09-10 00:06:40.612 -03:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'Ambev.DeveloperEvaluation.WebApi.Features.Sales.SalesController.GetByNumber (Ambev.DeveloperEvaluation.WebApi)'
+2025-09-10 00:06:40.614 -03:00 [INF] Ambev.DeveloperEvaluation.WebApi.Middleware.SerilogRequestLoggingMiddleware HTTP GET /api/sales/1 responded 200 in 16.6597 ms
+2025-09-10 00:06:40.616 -03:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5119/api/sales/1 - 200 null application/json; charset=utf-8 22.2776ms
+2025-09-10 00:07:00.023 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleUpdatedEventHandler SaleUpdatedEvent recebido: SaleId="1b585390-a17b-4af0-9546-de7ace83e82e", UpdatedAt="2025-09-10T03:06:29.9861521Z"
+2025-09-10 00:07:00.426 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="1b585390-a17b-4af0-9546-de7ace83e82e", CreatedAt="2025-09-10T03:05:29.8840409Z"
+2025-09-10 00:07:05.009 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" setting number of workers to 0
+2025-09-10 00:07:05.011 -03:00 [INF] Rebus.ServiceProvider.Internals.RebusBackgroundService Bus instance RebusBus Rebus 1 successfully stopped
+2025-09-10 00:07:05.012 -03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-10 00:07:05.135 -03:00 [INF] Rebus.Workers.ThreadPoolBased.ThreadPoolWorkerFactory Waiting for message handler continuations to finish...
+2025-09-10 00:07:30.533 -03:00 [INF] Rebus.Workers.ThreadPoolBased.ThreadPoolWorkerFactory Done :)
+2025-09-10 00:07:30.537 -03:00 [INF] Rebus.Threading.TaskParallelLibrary.TplAsyncTask Stopping periodic task "CleanupTrackedErrors"
+2025-09-10 00:07:30.548 -03:00 [INF] Rebus.Internals.ConnectionManager Disposing RabbitMQ connection
+2025-09-10 00:07:30.566 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" stopped
+2025-09-10 04:20:10.409 -03:00 [INF] Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckService Health Check enabled at: '/health'
+2025-09-10 04:20:10.601 -03:00 [INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using 'C:\Users\dnumajiri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-10 04:20:10.697 -03:00 [INF] Rebus.Internals.ConnectionManager Initializing RabbitMQ connection manager for transport with input queue "queue-sale"
+2025-09-10 04:20:10.952 -03:00 [INF] Rebus.Threading.TaskParallelLibrary.TplAsyncTask Starting periodic task "CleanupTrackedErrors" with interval 00:00:10
+2025-09-10 04:20:10.970 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" started
+2025-09-10 04:20:10.976 -03:00 [INF] Rebus.ServiceProvider.Internals.RebusBackgroundService Successfully created bus instance RebusBus Rebus 1 (isDefaultBus: true)
+2025-09-10 04:20:11.027 -03:00 [INF] Rebus.Bus.RebusBus Bus "Rebus 1" setting number of workers to 1
+2025-09-10 04:20:11.084 -03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5119
+2025-09-10 04:20:11.086 -03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-10 04:20:11.087 -03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-10 04:20:11.088 -03:00 [INF] Microsoft.Hosting.Lifetime Content root path: c:\Git\Ambev.DeveloperEvaluation\backend\src\Ambev.DeveloperEvaluation.WebApi
+2025-09-10 04:20:11.120 -03:00 [INF] Rebus.RabbitMq.RabbitMqTransport Successfully initialized consumer for "queue-sale"
+2025-09-10 04:20:11.720 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="0bc10b13-845f-4087-b340-619d4aa73518", CreatedAt="2025-09-10T05:07:41.9794931Z"
+2025-09-10 04:20:11.720 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="0e1acb50-7a8b-48a4-bfca-e559fb0ec75f", CreatedAt="2025-09-10T07:01:10.8215951Z"
+2025-09-10 04:20:11.741 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="37feb7fd-ae0f-41da-9a01-427d8a1bffd2", CreatedAt="2025-09-10T05:15:55.2927109Z"
+2025-09-10 04:20:11.720 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="8444cfc3-dd16-41e4-a130-79719e7cc319", CreatedAt="2025-09-10T05:02:57.8305406Z"
+2025-09-10 04:20:41.945 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="0bc10b13-845f-4087-b340-619d4aa73518", CreatedAt="2025-09-10T05:07:41.9794931Z"
+2025-09-10 04:20:42.141 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="37feb7fd-ae0f-41da-9a01-427d8a1bffd2", CreatedAt="2025-09-10T05:15:55.2927109Z"
+2025-09-10 04:20:42.144 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="0e1acb50-7a8b-48a4-bfca-e559fb0ec75f", CreatedAt="2025-09-10T07:01:10.8215951Z"
+2025-09-10 04:20:42.145 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="8444cfc3-dd16-41e4-a130-79719e7cc319", CreatedAt="2025-09-10T05:02:57.8305406Z"
+2025-09-10 04:21:11.969 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="0bc10b13-845f-4087-b340-619d4aa73518", CreatedAt="2025-09-10T05:07:41.9794931Z"
+2025-09-10 04:21:12.159 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="0e1acb50-7a8b-48a4-bfca-e559fb0ec75f", CreatedAt="2025-09-10T07:01:10.8215951Z"
+2025-09-10 04:21:12.197 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="8444cfc3-dd16-41e4-a130-79719e7cc319", CreatedAt="2025-09-10T05:02:57.8305406Z"
+2025-09-10 04:21:12.204 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="37feb7fd-ae0f-41da-9a01-427d8a1bffd2", CreatedAt="2025-09-10T05:15:55.2927109Z"
+2025-09-10 04:21:41.982 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="0bc10b13-845f-4087-b340-619d4aa73518", CreatedAt="2025-09-10T05:07:41.9794931Z"
+2025-09-10 04:21:42.214 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="0e1acb50-7a8b-48a4-bfca-e559fb0ec75f", CreatedAt="2025-09-10T07:01:10.8215951Z"
+2025-09-10 04:21:42.220 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="8444cfc3-dd16-41e4-a130-79719e7cc319", CreatedAt="2025-09-10T05:02:57.8305406Z"
+2025-09-10 04:21:42.221 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="37feb7fd-ae0f-41da-9a01-427d8a1bffd2", CreatedAt="2025-09-10T05:15:55.2927109Z"
+2025-09-10 04:22:11.990 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="0bc10b13-845f-4087-b340-619d4aa73518", CreatedAt="2025-09-10T05:07:41.9794931Z"
+2025-09-10 04:22:12.237 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="0e1acb50-7a8b-48a4-bfca-e559fb0ec75f", CreatedAt="2025-09-10T07:01:10.8215951Z"
+2025-09-10 04:22:12.263 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="37feb7fd-ae0f-41da-9a01-427d8a1bffd2", CreatedAt="2025-09-10T05:15:55.2927109Z"
+2025-09-10 04:22:12.266 -03:00 [INF] Ambev.DeveloperEvaluation.Application.Events.SaleCreatedEventHandler SaleCreatedEvent recebido: SaleId="8444cfc3-dd16-41e4-a130-79719e7cc319", CreatedAt="2025-09-10T05:02:57.8305406Z"

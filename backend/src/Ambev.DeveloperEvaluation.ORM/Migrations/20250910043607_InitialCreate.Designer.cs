@@ -12,15 +12,15 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Ambev.DeveloperEvaluation.ORM.Migrations
 {
     [DbContext(typeof(DefaultContext))]
-    [Migration("20250909185851_SaleNumberIdentity")]
-    partial class SaleNumberIdentity
+    [Migration("20250910043607_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.10")
+                .HasAnnotation("ProductVersion", "8.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -266,11 +266,13 @@ namespace Ambev.DeveloperEvaluation.ORM.Migrations
 
             modelBuilder.Entity("Ambev.DeveloperEvaluation.Domain.Entities.SaleItem", b =>
                 {
-                    b.HasOne("Ambev.DeveloperEvaluation.Domain.Entities.Sale", null)
-                        .WithMany()
+                    b.HasOne("Ambev.DeveloperEvaluation.Domain.Entities.Sale", "Sale")
+                        .WithMany("SaleItems")
                         .HasForeignKey("SaleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Sale");
                 });
 
             modelBuilder.Entity("Ambev.DeveloperEvaluation.Domain.Entities.User", b =>
@@ -363,6 +365,11 @@ namespace Ambev.DeveloperEvaluation.ORM.Migrations
 
                     b.Navigation("Name")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Ambev.DeveloperEvaluation.Domain.Entities.Sale", b =>
+                {
+                    b.Navigation("SaleItems");
                 });
 #pragma warning restore 612, 618
         }

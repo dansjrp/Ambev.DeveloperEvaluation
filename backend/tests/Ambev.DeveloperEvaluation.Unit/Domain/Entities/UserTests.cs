@@ -1,6 +1,6 @@
 using Ambev.DeveloperEvaluation.Domain.Entities;
 using Ambev.DeveloperEvaluation.Domain.Enums;
-using Ambev.DeveloperEvaluation.Unit.Domain.Entities.TestData;
+using Ambev.DeveloperEvaluation.Unit.Domain.Builder;
 using Xunit;
 
 namespace Ambev.DeveloperEvaluation.Unit.Domain.Entities;
@@ -18,7 +18,7 @@ public class UserTests
     public void Given_SuspendedUser_When_Activated_Then_StatusShouldBeActive()
     {
         // Arrange
-        var user = UserTestData.GenerateValidUser();
+        var user = new UserBuilder().Build();
         user.Status = UserStatus.Suspended;
 
         // Act
@@ -35,7 +35,7 @@ public class UserTests
     public void Given_ActiveUser_When_Suspended_Then_StatusShouldBeSuspended()
     {
         // Arrange
-        var user = UserTestData.GenerateValidUser();
+        var user = new UserBuilder().Build();
         user.Status = UserStatus.Active;
 
         // Act
@@ -52,7 +52,7 @@ public class UserTests
     public void Given_ValidUserData_When_Validated_Then_ShouldReturnValid()
     {
         // Arrange
-        var user = UserTestData.GenerateValidUser();
+        var user = new UserBuilder().Build();
 
         // Act
         var result = user.Validate();
@@ -72,9 +72,9 @@ public class UserTests
         var user = new User
         {
             Username = "", // Invalid: empty
-            Password = UserTestData.GenerateInvalidPassword(), // Invalid: doesn't meet password requirements
-            Email = UserTestData.GenerateInvalidEmail(), // Invalid: not a valid email
-            Phone = UserTestData.GenerateInvalidPhone(), // Invalid: doesn't match pattern
+            Password = "123", // Invalid: too short, no complexity
+            Email = "invalid-email", // Invalid: not a valid email
+            Phone = "12345", // Invalid: doesn't match pattern
             Status = UserStatus.Unknown, // Invalid: cannot be Unknown
             Role = UserRole.None // Invalid: cannot be None
         };

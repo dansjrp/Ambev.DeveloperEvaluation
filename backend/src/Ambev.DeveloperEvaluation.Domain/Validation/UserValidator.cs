@@ -12,7 +12,9 @@ public class UserValidator : AbstractValidator<User>
 
         RuleFor(x => x.Username)
             .NotEmpty().WithMessage("Username is required.")
-            .MinimumLength(3).WithMessage("Username must be at least 3 characters.");
+            .MinimumLength(3).WithMessage("Username must be at least 3 characters.")
+            .MaximumLength(50).WithMessage("Username must be at most 50 characters.")
+            .Matches(@"^(?!\d+$).*").WithMessage("Username cannot be only numbers.");
 
         RuleFor(x => x.Name)
             .NotNull().WithMessage("Name is required.");
@@ -38,10 +40,12 @@ public class UserValidator : AbstractValidator<User>
             .Matches(@"[^a-zA-Z0-9]").WithMessage("Password must contain a special character.");
 
         RuleFor(x => x.Role)
-            .IsInEnum().WithMessage("Invalid role.");
+            .IsInEnum().WithMessage("Invalid role.")
+            .Must(role => role != UserRole.None).WithMessage("Role cannot be None.");
 
         RuleFor(x => x.Status)
-            .IsInEnum().WithMessage("Invalid status.");
+            .IsInEnum().WithMessage("Invalid status.")
+            .Must(status => status != UserStatus.Unknown).WithMessage("Status cannot be Unknown.");
 
         RuleFor(x => x.Address)
             .NotNull().WithMessage("Address is required.");

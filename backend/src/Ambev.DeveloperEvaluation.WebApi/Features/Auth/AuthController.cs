@@ -55,6 +55,15 @@ public class AuthController : BaseController
                 Data = _mapper.Map<AuthenticateUserResponse>(response)
             });
         }
+        catch (UnauthorizedAccessException ex)
+        {
+            return Unauthorized(new ApiResponse
+            {
+                Success = false,
+                Message = "Unauthorized",
+                Details = ex.Message
+            });
+        }
         catch (Exception ex)
         {
             return InternalServerError(ex.Message);

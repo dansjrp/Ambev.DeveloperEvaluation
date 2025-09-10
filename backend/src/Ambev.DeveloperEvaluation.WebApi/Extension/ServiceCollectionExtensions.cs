@@ -27,7 +27,7 @@ namespace Ambev.DeveloperEvaluation.WebApi
                 var mongoColl = "event_audit";
                 return new EventAuditMongoRepository(mongoConn, mongoDb, mongoColl);
             });
-            
+
             builder.AddDefaultLogging();
 
             builder.Services.AddControllers()
@@ -65,8 +65,11 @@ namespace Ambev.DeveloperEvaluation.WebApi
 
             builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
+            var connectionString = builder.Configuration.GetConnectionString("RabbitMQ");
+
             builder.Services.AddRebus(configure => configure
-                .Transport(t => t.UseRabbitMq("amqp://guest:guest@localhost:5673", "queue-sale")),
+                .Transport(t => t.UseRabbitMq(connectionString, "queue-sale"))
+                .Options(o => o.SetNumberOfWorkers(1)),
                 onCreated: async bus =>
                 {
                     await bus.Subscribe<SaleCreatedEvent>();

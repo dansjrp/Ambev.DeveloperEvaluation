@@ -1,0 +1,299 @@
+﻿CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+
+START TRANSACTION;
+
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20241014011203_InitialMigrations') THEN
+    CREATE TABLE "Users" (
+        "Id" uuid NOT NULL DEFAULT (gen_random_uuid()),
+        "Username" character varying(50) NOT NULL,
+        "Password" character varying(100) NOT NULL,
+        "Phone" character varying(20) NOT NULL,
+        "Email" character varying(100) NOT NULL,
+        "Status" character varying(20) NOT NULL,
+        "Role" character varying(20) NOT NULL,
+        CONSTRAINT "PK_Users" PRIMARY KEY ("Id")
+    );
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20241014011203_InitialMigrations') THEN
+    INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+    VALUES ('20241014011203_InitialMigrations', '8.0.8');
+    END IF;
+END $EF$;
+COMMIT;
+
+START TRANSACTION;
+
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909011526_AddProductAndCartEntities') THEN
+    ALTER TABLE "Users" ADD "Address_City" character varying(100) NOT NULL DEFAULT '';
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909011526_AddProductAndCartEntities') THEN
+    ALTER TABLE "Users" ADD "Address_Geolocation_Lat" character varying(20) NOT NULL DEFAULT '';
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909011526_AddProductAndCartEntities') THEN
+    ALTER TABLE "Users" ADD "Address_Geolocation_Long" character varying(20) NOT NULL DEFAULT '';
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909011526_AddProductAndCartEntities') THEN
+    ALTER TABLE "Users" ADD "Address_Number" integer NOT NULL DEFAULT 0;
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909011526_AddProductAndCartEntities') THEN
+    ALTER TABLE "Users" ADD "Address_Street" character varying(100) NOT NULL DEFAULT '';
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909011526_AddProductAndCartEntities') THEN
+    ALTER TABLE "Users" ADD "Address_Zipcode" character varying(20) NOT NULL DEFAULT '';
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909011526_AddProductAndCartEntities') THEN
+    ALTER TABLE "Users" ADD "CreatedAt" timestamp with time zone NOT NULL DEFAULT TIMESTAMPTZ '-infinity';
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909011526_AddProductAndCartEntities') THEN
+    ALTER TABLE "Users" ADD "Name_Firstname" character varying(50) NOT NULL DEFAULT '';
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909011526_AddProductAndCartEntities') THEN
+    ALTER TABLE "Users" ADD "Name_Lastname" character varying(50) NOT NULL DEFAULT '';
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909011526_AddProductAndCartEntities') THEN
+    ALTER TABLE "Users" ADD "UpdatedAt" timestamp with time zone;
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909011526_AddProductAndCartEntities') THEN
+    CREATE TABLE "Carts" (
+        "Id" uuid NOT NULL,
+        "UserId" integer NOT NULL,
+        "Date" timestamp with time zone NOT NULL,
+        CONSTRAINT "PK_Carts" PRIMARY KEY ("Id")
+    );
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909011526_AddProductAndCartEntities') THEN
+    CREATE TABLE "Products" (
+        "Id" uuid NOT NULL,
+        "Title" character varying(100) NOT NULL,
+        "Price" numeric(18,2) NOT NULL,
+        "Description" character varying(500) NOT NULL,
+        "Category" character varying(50) NOT NULL,
+        "Image" character varying(255) NOT NULL,
+        "Rating_Rate" numeric(3,2) NOT NULL,
+        "Rating_Count" integer NOT NULL,
+        CONSTRAINT "PK_Products" PRIMARY KEY ("Id")
+    );
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909011526_AddProductAndCartEntities') THEN
+    CREATE TABLE "CartProduct" (
+        "CartId" uuid NOT NULL,
+        "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+        "ProductId" integer NOT NULL,
+        "Quantity" integer NOT NULL,
+        CONSTRAINT "PK_CartProduct" PRIMARY KEY ("CartId", "Id"),
+        CONSTRAINT "FK_CartProduct_Carts_CartId" FOREIGN KEY ("CartId") REFERENCES "Carts" ("Id") ON DELETE CASCADE
+    );
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909011526_AddProductAndCartEntities') THEN
+    INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+    VALUES ('20250909011526_AddProductAndCartEntities', '8.0.8');
+    END IF;
+END $EF$;
+COMMIT;
+
+START TRANSACTION;
+
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909151757_CartUserProductGuidFK') THEN
+    ALTER TABLE "Carts" DROP COLUMN "UserId";
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909151757_CartUserProductGuidFK') THEN
+    ALTER TABLE "CartProduct" DROP COLUMN "ProductId";
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909151757_CartUserProductGuidFK') THEN
+    ALTER TABLE "Carts" ADD "UserId" uuid NOT NULL DEFAULT '00000000-0000-0000-0000-000000000000';
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909151757_CartUserProductGuidFK') THEN
+    ALTER TABLE "CartProduct" ADD "ProductId" uuid NOT NULL DEFAULT '00000000-0000-0000-0000-000000000000';
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909151757_CartUserProductGuidFK') THEN
+    CREATE INDEX "IX_Carts_UserId" ON "Carts" ("UserId");
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909151757_CartUserProductGuidFK') THEN
+    CREATE INDEX "IX_CartProduct_ProductId" ON "CartProduct" ("ProductId");
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909151757_CartUserProductGuidFK') THEN
+    ALTER TABLE "CartProduct" ADD CONSTRAINT "FK_CartProduct_Products_ProductId" FOREIGN KEY ("ProductId") REFERENCES "Products" ("Id") ON DELETE RESTRICT;
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909151757_CartUserProductGuidFK') THEN
+    ALTER TABLE "Carts" ADD CONSTRAINT "FK_Carts_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE RESTRICT;
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909151757_CartUserProductGuidFK') THEN
+    INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+    VALUES ('20250909151757_CartUserProductGuidFK', '8.0.8');
+    END IF;
+END $EF$;
+COMMIT;
+
+START TRANSACTION;
+
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909180915_AddSaleAndSaleItem') THEN
+    CREATE TABLE "Sales" (
+        "Id" uuid NOT NULL,
+        "Number" integer NOT NULL,
+        "Date" timestamp with time zone NOT NULL,
+        "UserId" uuid NOT NULL,
+        "Total" numeric(18,2) NOT NULL,
+        "Branch" character varying(100) NOT NULL,
+        CONSTRAINT "PK_Sales" PRIMARY KEY ("Id")
+    );
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909180915_AddSaleAndSaleItem') THEN
+    CREATE TABLE "SaleItems" (
+        "Id" uuid NOT NULL,
+        "SaleId" uuid NOT NULL,
+        "ProductId" uuid NOT NULL,
+        "Quantity" integer NOT NULL,
+        "Price" numeric(18,2) NOT NULL,
+        "Discounts" numeric(18,2) NOT NULL,
+        "TotalPrice" numeric(18,2) NOT NULL,
+        "Cancelled" boolean NOT NULL,
+        CONSTRAINT "PK_SaleItems" PRIMARY KEY ("Id"),
+        CONSTRAINT "FK_SaleItems_Sales_SaleId" FOREIGN KEY ("SaleId") REFERENCES "Sales" ("Id") ON DELETE CASCADE
+    );
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909180915_AddSaleAndSaleItem') THEN
+    CREATE INDEX "IX_SaleItems_SaleId" ON "SaleItems" ("SaleId");
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250909180915_AddSaleAndSaleItem') THEN
+    INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+    VALUES ('20250909180915_AddSaleAndSaleItem', '8.0.8');
+    END IF;
+END $EF$;
+COMMIT;
+
+START TRANSACTION;
+
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250910043607_InitialCreate') THEN
+    ALTER TABLE "Sales" ALTER COLUMN "Number" DROP DEFAULT;
+    ALTER TABLE "Sales" ALTER COLUMN "Number" ADD GENERATED BY DEFAULT AS IDENTITY;
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20250910043607_InitialCreate') THEN
+    INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+    VALUES ('20250910043607_InitialCreate', '8.0.8');
+    END IF;
+END $EF$;
+COMMIT;
+
